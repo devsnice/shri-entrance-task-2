@@ -1,7 +1,25 @@
 div {
   margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+div {
+  margin: 0;
   font-size: 70px;
 }
-header {
-  width: 100%;
+header h1 {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+header h1 {
+  color: #eee;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -1,3 +1,7 @@
 header {
-  width: 100%;
+  h1 {
+    color: #eee;
+    width: 200px;
+    @util center-block;
+  }
 }

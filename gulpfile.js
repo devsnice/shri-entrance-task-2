@@ -1,8 +1,13 @@
 const gulp = require('gulp');
 const pug = require('gulp-pug');
+
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const concatCss = require('gulp-concat-css');
+const cssAutoreset = require('postcss-autoreset');
+const cssUtilities = require('postcss-utilities');
+const precss = require('precss');
+
 const browserSync = require('browser-sync').create();
 
 const paths = {
@@ -32,7 +37,18 @@ gulp.task('pug', () => {
 */
 
 gulp.task('css', () => {
-  const plugins = [autoprefixer({ browsers: ['last 2 version'] })];
+  const plugins = [
+    precss(),
+    cssUtilities(),
+    cssAutoreset({
+      reset: {
+        margin: 0,
+        padding: 0,
+        boxSizing: 'border-box'
+      }
+    }),
+    autoprefixer({ browsers: ['last 2 version'] })
+  ];
 
   return gulp
     .src(paths.styles)

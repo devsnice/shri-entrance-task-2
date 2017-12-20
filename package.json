@@ -13,7 +13,10 @@
     "browser-sync": "^2.19.0",
     "gulp": "^3.9.1",
     "gulp-concat-css": "^2.3.0",
-    "gulp-pug": "^3.3.0"
+    "gulp-pug": "^3.3.0",
+    "postcss-autoreset": "^2.0.1",
+    "postcss-utilities": "^0.7.0",
+    "precss": "^2.0.0"
   },
   "dependencies": {
     "gulp-postcss": "^7.0.0"
