@@ -12,7 +12,8 @@ const browserSync = require('browser-sync').create();
 
 const paths = {
   public: './public',
-  views: './src/pages/**/*.pug',
+  views: './src/**/*.pug',
+  pages: './src/pages/**/*.pug',
   styles: './src/**/*.css'
 };
 
@@ -22,7 +23,7 @@ const paths = {
 
 gulp.task('pug', () => {
   return gulp
-    .src(paths.views)
+    .src(paths.pages)
     .pipe(
       pug({
         verbose: true,
