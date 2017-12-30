@@ -25,4 +25,63 @@
     overflow-x: scroll;
     overflow-y: visible;
   }
+
+  &-grid {
+    position: relative;
+    height: 100%;
+    width: calc(100% - 245px);
+
+    &__inner {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 245px;
+      top: 0;
+    }
+
+    &__legend {
+      position: absolute;
+      height: 100%;
+      width: 1px;
+      background-color: rgba(19, 100, 205, 0.1);
+      top: 0;
+
+      @for $hour from 8 to 23 {
+        &_hour_$hour {
+          left: calc(65px * ($hour - 7) - 35px);
+        }
+      }
+
+      &_hour_current {
+        background-color: #007dff;
+        left: calc(65px * (12.5 - 7) - 35px);
+      }
+
+      &-hour {
+        position: absolute;
+        bottom: 100%;
+        margin-bottom: 16px;
+        font-size: 11px;
+        transform: translateX(-50%);
+        font-family: HelveticaNeue-Bold;
+        letter-spacing: 0.4px;
+        color: #252525;
+
+        &_current {
+          height: 20px;
+          line-height: 20px;
+          width: 49px;
+          text-align: center;
+          color: #fff;
+          background: #007dff;
+          border-radius: 100px;
+          margin-bottom: 12px;
+        }
+
+        &_past {
+          color: #858e98;
+        }
+      }
+    }
+  }
 }

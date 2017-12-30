@@ -4,3 +4,18 @@
       .schedule-nav__content
         .schedule-nav__date 14 декабря
         .schedule-nav__timeline-place
+    .schedule-grid
+      .schedule-grid__inner
+        // legend grid for the schedule from 8 am to 23 pm
+        - var hour = 8;
+        while hour < 24
+          // time before 12 is the past
+          if hour < 13
+            section(class="schedule-grid__legend schedule-grid__legend_hour_"+hour)
+              .schedule-grid__legend-hour_past.schedule-grid__legend-hour= hour++
+          else
+            section(class="schedule-grid__legend schedule-grid__legend_hour_"+hour)
+              .schedule-grid__legend-hour= hour++
+        // legend for current time
+        section.schedule-grid__legend.schedule-grid__legend_hour_current
+            .schedule-grid__legend-hour.schedule-grid__legend-hour_current 12:30

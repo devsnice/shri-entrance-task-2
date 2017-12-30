@@ -48,7 +48,30 @@ body {
 .schedule-nav,
 .schedule-nav__content,
 .schedule-nav__date,
-.schedule-timeline {
+.schedule-timeline,
+.schedule-grid,
+.schedule-grid__inner,
+.schedule-grid__legend,
+.schedule-grid__legend_hour_8,
+.schedule-grid__legend_hour_9,
+.schedule-grid__legend_hour_10,
+.schedule-grid__legend_hour_11,
+.schedule-grid__legend_hour_12,
+.schedule-grid__legend_hour_13,
+.schedule-grid__legend_hour_14,
+.schedule-grid__legend_hour_15,
+.schedule-grid__legend_hour_16,
+.schedule-grid__legend_hour_17,
+.schedule-grid__legend_hour_18,
+.schedule-grid__legend_hour_19,
+.schedule-grid__legend_hour_20,
+.schedule-grid__legend_hour_21,
+.schedule-grid__legend_hour_22,
+.schedule-grid__legend_hour_23,
+.schedule-grid__legend_hour_current,
+.schedule-grid__legend-hour,
+.schedule-grid__legend-hour_current,
+.schedule-grid__legend-hour_past {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -84,4 +107,122 @@ body {
   background: #f6f7f9;
   overflow-x: scroll;
   overflow-y: visible;
+}
+
+.schedule-grid {
+  position: relative;
+  height: 100%;
+  width: calc(100% - 245px);
+}
+
+.schedule-grid__inner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 245px;
+  top: 0;
+}
+
+.schedule-grid__legend {
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: rgba(19, 100, 205, 0.1);
+  top: 0;
+}
+
+.schedule-grid__legend_hour_8 {
+  left: calc(65px * (8 - 7) - 35px);
+}
+
+.schedule-grid__legend_hour_9 {
+  left: calc(65px * (9 - 7) - 35px);
+}
+
+.schedule-grid__legend_hour_10 {
+  left: calc(65px * (10 - 7) - 35px);
+}
+
+.schedule-grid__legend_hour_11 {
+  left: calc(65px * (11 - 7) - 35px);
+}
+
+.schedule-grid__legend_hour_12 {
+  left: calc(65px * (12 - 7) - 35px);
+}
+
+.schedule-grid__legend_hour_13 {
+  left: calc(65px * (13 - 7) - 35px);
+}
+
+.schedule-grid__legend_hour_14 {
+  left: calc(65px * (14 - 7) - 35px);
+}
+
+.schedule-grid__legend_hour_15 {
+  left: calc(65px * (15 - 7) - 35px);
+}
+
+.schedule-grid__legend_hour_16 {
+  left: calc(65px * (16 - 7) - 35px);
+}
+
+.schedule-grid__legend_hour_17 {
+  left: calc(65px * (17 - 7) - 35px);
+}
+
+.schedule-grid__legend_hour_18 {
+  left: calc(65px * (18 - 7) - 35px);
+}
+
+.schedule-grid__legend_hour_19 {
+  left: calc(65px * (19 - 7) - 35px);
+}
+
+.schedule-grid__legend_hour_20 {
+  left: calc(65px * (20 - 7) - 35px);
+}
+
+.schedule-grid__legend_hour_21 {
+  left: calc(65px * (21 - 7) - 35px);
+}
+
+.schedule-grid__legend_hour_22 {
+  left: calc(65px * (22 - 7) - 35px);
+}
+
+.schedule-grid__legend_hour_23 {
+  left: calc(65px * (23 - 7) - 35px);
+}
+
+.schedule-grid__legend_hour_current {
+  background-color: #007dff;
+  left: calc(65px * (12.5 - 7) - 35px);
+}
+
+.schedule-grid__legend-hour {
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: 16px;
+  font-size: 11px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  font-family: HelveticaNeue-Bold;
+  letter-spacing: 0.4px;
+  color: #252525;
+}
+
+.schedule-grid__legend-hour_current {
+  height: 20px;
+  line-height: 20px;
+  width: 49px;
+  text-align: center;
+  color: #fff;
+  background: #007dff;
+  border-radius: 100px;
+  margin-bottom: 12px;
+}
+
+.schedule-grid__legend-hour_past {
+  color: #858e98;
 }
