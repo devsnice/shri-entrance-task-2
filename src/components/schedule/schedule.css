@@ -1,18 +1,37 @@
 .schedule {
   height: calc(100% - 56px);
+  width: 100%;
 
   &-nav {
     border-bottom: 1px solid #e9ecef;
-    width: 1280px;
+    width: 100%;
 
     &__content {
       padding: 11px 0;
       background: #fff;
+
+      @media screen and (max-width: 420px) {
+        padding: 0;
+      }
     }
 
     &__date {
       width: 245px;
       padding: 0 24px;
+
+      @media screen and (max-width: 420px) {
+        width: 100%;
+        height: 56px;
+      }
+    }
+
+    &__timeline {
+      @media screen and (max-width: 420px) {
+        width: 1280px;
+        height: 32px;
+        border-top: 1px solid #e9ecef;
+        background: #fff;
+      }
     }
   }
 
@@ -24,12 +43,12 @@
     background: #f6f7f9;
     overflow-x: scroll;
     overflow-y: visible;
+    position: relative;
   }
 
   &-grid {
-    position: relative;
+    position: absolute;
     height: 100%;
-    width: calc(100% - 245px);
 
     &__inner {
       position: absolute;
@@ -37,6 +56,10 @@
       width: 100%;
       left: 245px;
       top: 0;
+
+      @media screen and (max-width: 420px) {
+        left: 145px;
+      }
     }
 
     &__legend {
@@ -45,6 +68,7 @@
       width: 1px;
       background-color: rgba(19, 100, 205, 0.1);
       top: 0;
+      z-index: 10;
 
       @for $hour from 8 to 23 {
         &_hour_$hour {
@@ -76,12 +100,121 @@
           background: #007dff;
           border-radius: 100px;
           margin-bottom: 12px;
+
+          @media screen and (max-width: 420px) {
+            margin-bottom: 10px;
+          }
         }
 
         &_past {
           color: #858e98;
         }
+
+        @media screen and (max-width: 420px) {
+          margin-bottom: 10px;
+        }
       }
     }
+  }
+
+  &-stages {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    &__underlayer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 245px;
+      background: #fff;
+      height: 100%;
+
+      @media screen and (max-width: 420px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.stage {
+  position: relative;
+  padding-top: 21px;
+
+  &__label {
+    font-family: HelveticaNeue-Bold;
+    font-size: 11px;
+    color: #858e98;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 420px) {
+      padding-left: 16px;
+    }
+  }
+
+  &__rooms {
+    margin-top: 8px;
+  }
+}
+
+.room {
+  display: flex;
+  margin-bottom: 16px;
+  width: 1280px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__description {
+    width: 245px;
+
+    @media screen and (max-width: 420px) {
+      width: 181px;
+      background: #fff;
+      height: 58px;
+      padding: 12px 25px 0 16px;
+    }
+  }
+
+  &__label {
+    font-family: HelveticaNeue-Medium;
+    font-size: 15px;
+    line-height: 17px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__capacity {
+    font-size: 13px;
+    line-height: 17px;
+  }
+
+  &-schedule {
+    height: 28px;
+    background: #fff;
+    width: calc(100% - 245px);
+    position: relative;
+
+    &__interval {
+      position: absolute;
+      background-color: #d5dfe9;
+      width: 250px;
+      left: 23px;
+      top: 0;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 420px) {
+      height: 58px;
+      width: calc(100% - 145px);
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    margin-bottom: 2px;
   }
 }
