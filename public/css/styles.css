@@ -83,7 +83,14 @@ body {
 .room__label,
 .room__capacity,
 .room-schedule,
-.room-schedule__interval {
+.room-schedule__interval,
+.room-schedule__interval_reserved,
+.room-schedule__interval_reserved_pressed,
+.room-schedule__interval_free,
+.room-schedule__interval_free_pressed,
+.room_reserved .room__label,
+.room_reserved .room__capacity,
+.room_focused .room__label {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -373,12 +380,50 @@ body {
 
 .room-schedule__interval {
   position: absolute;
-  background-color: #d5dfe9;
-  width: 250px;
-  left: 23px;
   top: 0;
   height: 100%;
   cursor: pointer;
+}
+
+.room-schedule__interval_reserved {
+  background-color: #d5dfe9;
+  width: 250px;
+  left: 23px;
+}
+
+.room-schedule__interval_reserved:hover {
+  background-color: #98a9b9;
+}
+
+.room-schedule__interval_reserved_pressed {
+  background-color: #98a9b9;
+}
+
+.room-schedule__interval_free {
+  background-color: #fff;
+  width: 95px;
+  left: 273px;
+}
+
+.room-schedule__interval_free:hover {
+  background-color: #1d54fe;
+  border-radius: 2px;
+  position: relative;
+}
+
+.room-schedule__interval_free:hover:before {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #fff;
+}
+
+.room-schedule__interval_free_pressed {
+  background-color: #1d00fe;
 }
 
 @media screen and (max-width: 420px) {
@@ -386,6 +431,18 @@ body {
     height: 58px;
     width: calc(100% - 145px);
   }
+}
+
+.room_reserved .room__label {
+  color: #858e98;
+}
+
+.room_reserved .room__capacity {
+  color: #858e98;
+}
+
+.room_focused .room__label {
+  color: #0070e0;
 }
 
 @media screen and (max-width: 420px) {

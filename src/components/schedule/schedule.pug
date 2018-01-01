@@ -26,13 +26,14 @@
       .stage
         .stage__label 7 этаж
         .stage__rooms
-          .room
+          .room.room_reserved
             .room__description
               .room__label Ржавый Длинный Фред
               .room__capacity 56 человек
             .room-schedule
-              .room-schedule__interval
-          .room
+              .room-schedule__interval.room-schedule__interval_reserved
+              .room-schedule__interval.room-schedule__interval_free
+          .room.room_focused
             .room__description
               .room__label Прачечная
               .room__capacity до 10 человек
