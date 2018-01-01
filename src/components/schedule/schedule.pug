@@ -1,9 +1,11 @@
 .schedule
+  .schedule-datepicker.schedule-datepicker_mobile
+    include ../datepicker/datepicker.pug
   .schedule-timeline
     .schedule-nav
       .schedule-nav__content
         .schedule-nav__date
-          .schedule-nav__calendar 14 декабря
+          include ../datepicker/datepicker.pug
         .schedule-nav__timeline
     .schedule-grid
       .schedule-grid__inner
