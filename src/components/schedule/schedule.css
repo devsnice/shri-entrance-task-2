@@ -79,6 +79,13 @@
       &_hour_current {
         background-color: #007dff;
         left: calc(65px * (12.5 - 7) - 35px);
+        height: calc(100% + 12px);
+        top: -12px;
+
+        @media screen and (max-width: 420px) {
+          height: calc(100% + 6px);
+          top: -6px;
+        }
       }
 
       &-hour {
@@ -91,6 +98,10 @@
         letter-spacing: 0.4px;
         color: #252525;
 
+        @media screen and (max-width: 420px) {
+          margin-bottom: 10px;
+        }
+
         &_current {
           height: 20px;
           line-height: 20px;
@@ -99,19 +110,15 @@
           color: #fff;
           background: #007dff;
           border-radius: 100px;
-          margin-bottom: 12px;
+          margin-bottom: 0;
 
           @media screen and (max-width: 420px) {
-            margin-bottom: 10px;
+            margin-bottom: 0;
           }
         }
 
         &_past {
           color: #858e98;
-        }
-
-        @media screen and (max-width: 420px) {
-          margin-bottom: 10px;
         }
       }
     }
