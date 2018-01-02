@@ -8,13 +8,16 @@ const cssAutoreset = require('postcss-autoreset');
 const cssUtilities = require('postcss-utilities');
 const precss = require('precss');
 
+const concat = require('gulp-concat');
+
 const browserSync = require('browser-sync').create();
 
 const paths = {
   public: './public',
   views: './src/**/*.pug',
   pages: './src/pages/**/*.pug',
-  styles: './src/**/*.css'
+  styles: './src/**/*.css',
+  scripts: './src/**/*.js'
 };
 
 /*
@@ -59,6 +62,17 @@ gulp.task('css', () => {
 });
 
 /*
+    Scripts
+*/
+
+gulp.task('scripts', () => {
+  return gulp
+    .src(paths.scripts)
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest(`${paths.public}/scripts`));
+});
+
+/*
     Static server
 */
 
@@ -81,13 +95,15 @@ const reloadServer = done => {
 
 gulp.task('pug-watch', ['pug'], reloadServer);
 gulp.task('css-watch', ['css'], reloadServer);
+gulp.task('scripts-watch', ['scripts'], reloadServer);
 
 gulp.task('watch', () => {
   gulp.watch(paths.views, ['pug-watch']);
   gulp.watch(paths.styles, ['css-watch']);
+  gulp.watch(paths.scripts, ['scripts-watch']);
 });
 
-gulp.task('default', ['pug', 'css', 'watch'], () => {
+gulp.task('default', ['pug', 'css', 'watch', 'scripts'], () => {
   browserSync.init({
     server: {
       baseDir: paths.public
