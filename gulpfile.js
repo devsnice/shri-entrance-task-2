@@ -9,6 +9,7 @@ const cssUtilities = require('postcss-utilities');
 const precss = require('precss');
 
 const concat = require('gulp-concat');
+const flatten = require('gulp-flatten');
 
 const browserSync = require('browser-sync').create();
 
@@ -17,7 +18,8 @@ const paths = {
   views: './src/**/*.pug',
   pages: './src/pages/**/*.pug',
   styles: './src/**/*.css',
-  scripts: './src/**/*.js'
+  scripts: './src/**/*.js',
+  images: './src/**/*.svg'
 };
 
 /*
@@ -73,6 +75,17 @@ gulp.task('scripts', () => {
 });
 
 /*
+    Images
+*/
+
+gulp.task('images', () =>
+  gulp
+    .src(paths.images)
+    .pipe(flatten())
+    .pipe(gulp.dest(`${paths.public}/images`))
+);
+
+/*
     Static server
 */
 
@@ -103,7 +116,7 @@ gulp.task('watch', () => {
   gulp.watch(paths.scripts, ['scripts-watch']);
 });
 
-gulp.task('default', ['pug', 'css', 'watch', 'scripts'], () => {
+gulp.task('default', ['pug', 'css', 'watch', 'scripts', 'images'], () => {
   browserSync.init({
     server: {
       baseDir: paths.public
