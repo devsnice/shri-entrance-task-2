@@ -7,6 +7,7 @@ const concatCss = require('gulp-concat-css');
 const cssAutoreset = require('postcss-autoreset');
 const cssUtilities = require('postcss-utilities');
 const precss = require('precss');
+const svgSprite = require('gulp-svg-sprites');
 
 const concat = require('gulp-concat');
 const flatten = require('gulp-flatten');
@@ -19,7 +20,8 @@ const paths = {
   pages: './src/pages/**/*.pug',
   styles: './src/**/*.css',
   scripts: './src/**/*.js',
-  images: './src/**/*.svg'
+  images: './src/components/**/*.{png,svg,jpg,jpeg}',
+  icons: './src/icons/**/*.svg'
 };
 
 /*
@@ -86,6 +88,21 @@ gulp.task('images', () =>
 );
 
 /*
+    Icons
+*/
+
+gulp.task('icons', () =>
+  gulp
+    .src(paths.icons)
+    .pipe(
+      svgSprite({
+        selector: 'icon_%f'
+      })
+    )
+    .pipe(gulp.dest(`${paths.public}`))
+);
+
+/*
     Static server
 */
 
@@ -116,10 +133,14 @@ gulp.task('watch', () => {
   gulp.watch(paths.scripts, ['scripts-watch']);
 });
 
-gulp.task('default', ['pug', 'css', 'watch', 'scripts', 'images'], () => {
-  browserSync.init({
-    server: {
-      baseDir: paths.public
-    }
-  });
-});
+gulp.task(
+  'default',
+  ['pug', 'css', 'watch', 'scripts', 'images', 'icons'],
+  () => {
+    browserSync.init({
+      server: {
+        baseDir: paths.public
+      }
+    });
+  }
+);
