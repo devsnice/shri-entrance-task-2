@@ -247,7 +247,7 @@
           background-color: #98a9b9;
         }
 
-        &_pressed {
+        &:focus {
           background-color: #98a9b9;
         }
       }
@@ -275,6 +275,14 @@
 
         &_pressed {
           background-color: #1d00fe;
+        }
+      }
+
+      &:focus {
+        outline: none;
+
+        .tooltip {
+          display: block;
         }
       }
     }

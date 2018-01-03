@@ -34,7 +34,8 @@
               .room__label Ржавый Длинный Фред
               .room__capacity 56 человек
             .room-schedule
-              .room-schedule__interval.room-schedule__interval_reserved
+              a.room-schedule__interval.room-schedule__interval_reserved(tabindex=0)
+                include ../tooltip/tooltip.pug
               .room-schedule__interval.room-schedule__interval_free
           .room.room_focused
             .room__description

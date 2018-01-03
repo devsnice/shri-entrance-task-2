@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" href="../css/styles.css"/>
+    <link rel="stylesheet" href="../css/sprite.css"/>
     <title>Яндекс Переговорки</title>
   </head>
 </html>
@@ -12,7 +13,7 @@
   <div class="application">
     <header class="header">
       <div class="header__content">
-        <div class="header__logo"> <a href="/index.html"><img src="./images/logo.svg"/></a></div>
+        <div class="header__logo"> <a href="/index.html"><img src="./images/logo.svg" alt="Яндекс переговорки"/></a></div>
         <div class="header__controls">
           <button class="button">Создать встречу</button>
         </div>
@@ -118,8 +119,25 @@
                   <div class="room__label">Ржавый Длинный Фред</div>
                   <div class="room__capacity">56 человек</div>
                 </div>
-                <div class="room-schedule">
-                  <div class="room-schedule__interval room-schedule__interval_reserved"></div>
+                <div class="room-schedule"><a class="room-schedule__interval room-schedule__interval_reserved" tabindex="0">
+                    <div class="tooltip">
+                      <div class="tooltip__triangle"></div>
+                      <div class="tooltip__control">
+                        <button class="control control_edit">
+                          <div class="icon icon_edit"></div>
+                        </button>
+                      </div>
+                      <div class="tooltip__info">
+                        <div class="tooltip__title">Рассуждения о высоком</div>
+                        <div class="tooltip__description">14 декабря, 15:00—17:00  ·  Жёлтый дом</div>
+                      </div>
+                      <div class="tooltip-people">
+                        <div class="person person_float_left"><img class="person__avatar" src="./images/avatar.jpg" alt="Дарт Вейдер"/>
+                          <div class="person__name">Дарт Вейдер</div>
+                        </div>
+                        <div class="tooltip-people__rest">и 12 участников</div>
+                      </div>
+                    </div></a>
                   <div class="room-schedule__interval room-schedule__interval_free"></div>
                 </div>
               </div>
