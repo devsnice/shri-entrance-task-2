@@ -1,0 +1,52 @@
+.button {
+  border-radius: 4px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 16px;
+  font-family: HelveticaNeue-Medium;
+  cursor: pointer;
+  border: none;
+
+  @media screen and (max-width: 420px) {
+    height: 44px;
+    line-height: 44px;
+    font-size: 15px;
+    padding: 0 24px;
+  }
+
+  &_blue {
+    background: #007dff;
+    color: #fff;
+
+    &:hover {
+      background: #0059ff;
+    }
+
+    &:focus {
+      background: #0059ff;
+    }
+
+    &:disabled {
+      background: #e9ecef;
+      color: rgba(#000000, 0.2);
+    }
+  }
+
+  &_grey {
+    background: #e9ecef;
+    color: #000;
+
+    &:hover {
+      background: #dde0e4;
+    }
+
+    &:focus {
+      background: #c8cdd3;
+    }
+
+    &:disabled {
+      background: #e9ecef;
+      color: rgba(0, 0, 0, 0.2);
+    }
+  }
+}
