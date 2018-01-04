@@ -22,12 +22,34 @@
     }
   }
 
+  &__icon {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 17px;
+  }
+
   &__title {
+    color: #000000;
     font-family: HelveticaNeue-Bold;
     font-size: 20px;
-    color: #000000;
-    letter-spacing: 0;
     line-height: 24px;
+    text-align: center;
+    margin-bottom: 8px;
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    &-text {
+      margin-bottom: 8px;
+      text-align: center;
+    }
+  }
+
+  &__actions {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
   }
 
   @media screen and (max-width: 420px) {
