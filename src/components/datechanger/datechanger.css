@@ -1,0 +1,25 @@
+.datepicker {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__date {
+    text-align: center;
+    font-family: HelveticaNeue-Medium;
+    font-size: 15px;
+    color: #000000;
+    line-height: 18px;
+    cursor: pointer;
+
+    &:focus {
+      color: #0070e0;
+    }
+  }
+
+  &__control {
+    &_next {
+      transform: rotate(180deg);
+    }
+  }
+}

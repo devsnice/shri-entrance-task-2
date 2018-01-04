@@ -48,31 +48,27 @@
       Initialization
   */
   const init = () => {
-    const isMobileScreen = document.documentElement.clientWidth <= 420;
+    const schedule = document.getElementById('schedule');
 
-    if (isMobileScreen) {
-      const schedule = document.getElementById('schedule');
+    schedule.addEventListener('scroll', e => {
+      if (schedule.scrollLeft > 50) {
+        const newPosition = schedule.scrollLeft;
 
-      schedule.addEventListener('scroll', e => {
-        if (schedule.scrollLeft > 50) {
-          const newPosition = schedule.scrollLeft;
+        changeStageLabelPosition(newPosition);
+        changeRoomLabelPosition(newPosition);
+        changeRoomLabelClass('float');
 
-          changeStageLabelPosition(newPosition);
-          changeRoomLabelPosition(newPosition);
-          changeRoomLabelClass('float');
+        stateChanged = true;
+      } else {
+        if (stateChanged) {
+          changeStageLabelPosition();
+          changeRoomLabelPosition();
+          changeRoomLabelClass();
 
-          stateChanged = true;
-        } else {
-          if (stateChanged) {
-            changeStageLabelPosition();
-            changeRoomLabelPosition();
-            changeRoomLabelClass();
-
-            stateChanged = false;
-          }
+          stateChanged = false;
         }
-      });
-    }
+      }
+    });
   };
 
   init();

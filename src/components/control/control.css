@@ -1,22 +1,22 @@
 .control {
   border: none;
   cursor: pointer;
+  height: 24px;
+  width: 24px;
+  border-radius: 100%;
+  background: #e9ecef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  &_edit {
-    height: 24px;
-    width: 24px;
-    border-radius: 100%;
-    background: #e9ecef;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  &:hover {
+    background: #dcdfe1;
+  }
 
-    .icon_edit {
-      fill: rgba(0, 0, 0, 0.43);
-    }
-
-    &:hover {
-      background: #dcdfe1;
+  &_arrow {
+    @media screen and (max-width: 420px) {
+      height: 32px;
+      width: 32px;
     }
   }
 }

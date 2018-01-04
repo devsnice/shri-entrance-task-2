@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("../svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 1.2em 1.2em;
+    background-size: 1.2em 2.6em;
 }
 
 .no-svg .icon:before {
@@ -17,8 +17,17 @@
 
 
 
-  .icon.icon_edit:before {
+  .icon.icon_arrow:before {
       background-position: 0em 0em;
+      width: 0.9em;
+      height: 1.4em;
+  }
+
+
+
+
+  .icon.icon_edit:before {
+      background-position: 0em -1.4em;
       width: 1.2em;
       height: 1.2em;
   }
