@@ -1,0 +1,8 @@
+mixin input(label, placeholder, value, icon)
+  label.input-wrapper
+    div.input__label= label
+    div.input__element
+      input(type="text", placeholder= placeholder, value= value).input
+      if icon
+        span.input__icon
+          div(class="icon icon_"+icon)
