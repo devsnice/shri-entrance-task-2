@@ -129,6 +129,7 @@ gulp.task('scripts-watch', ['scripts'], reloadServer);
 
 gulp.task('watch', () => {
   gulp.watch(paths.views, ['pug-watch']);
+  gulp.watch(paths.pages, ['pug-watch']);
   gulp.watch(paths.styles, ['css-watch']);
   gulp.watch(paths.scripts, ['scripts-watch']);
 });

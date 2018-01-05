@@ -1,0 +1,19 @@
+section.editor
+  header.editor-header
+    h2.editor-header__title Новая встреча
+    .editor-header__close
+      include ../control/closeControl.pug
+
+  .editor-body
+    .editor-body__column
+      p Тема
+      p Участники
+    .editor-body__column
+      p Дата
+      p Рекомендованные переговорки
+
+  .editor-controls
+    .editor-controls__buttons
+      .button.button_grey.button_mr_16 Отмена
+      a(href="/eventCreated.html") 
+        .button.button_blue Создать встречу
