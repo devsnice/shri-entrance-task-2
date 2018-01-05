@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <link rel="stylesheet" href="../css/sprite.css"/>
+    <title>Яндекс Переговорки</title>
+  </head>
+</html>
+<body>
+  <div class="application">
+    <header class="header">
+      <div class="header__content">
+        <h1 class="header__logo"> <a href="/index.html"><img class="header__logo-image" src="./images/logo.svg" alt="Яндекс переговорки"/></a></h1>
+        <div class="header__controls"><a href="/createEvent.html"> 
+            <button class="button button_blue">Создать встречу</button></a></div>
+      </div>
+    </header>
+    <div class="layout">
+      <section class="editor">
+        <header class="editor-header">
+          <h2 class="editor-header__title">Новая встреча</h2>
+          <div class="editor-header__close">
+            <button class="control control_close">
+              <div class="icon icon_close"></div>
+            </button>
+          </div>
+        </header>
+        <div class="editor-body">
+          <div class="editor-body__column">
+            <p>Тема</p>
+            <p>Участники</p>
+          </div>
+          <div class="editor-body__column">
+            <p>Дата</p>
+            <p>Рекомендованные переговорки</p>
+          </div>
+        </div>
+        <div class="editor-controls">
+          <div class="editor-controls__buttons">
+            <div class="button button_grey button_mr_16">Отмена</div><a href="/eventCreated.html"> 
+              <div class="button button_blue">Создать встречу</div></a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+<script src="./scripts/main.js"></script>
