@@ -30,13 +30,49 @@
         </header>
         <div class="editor-body">
           <div class="editor-body__column">
-            <p>Тема</p>
-            <p>Участники</p>
+            <div class="editor-input">
+                    <label class="input-wrapper">
+                      <div class="input__label">Тема</div>
+                      <div class="input__element">
+                        <input class="input" type="text" placeholder="О чём будете говорить?"/>
+                      </div>
+                    </label>
+            </div>
           </div>
           <div class="editor-body__column">
-            <p>Дата</p>
-            <p>Рекомендованные переговорки</p>
+            <fieldgroup class="editor-body__fieldrow">
+              <div class="editor-input editor-input_date">
+                      <label class="input-wrapper">
+                        <div class="input__label">Дата</div>
+                        <div class="input__element">
+                          <input class="input" type="text" placeholder="Дата" value="14 декабря, 2017"/><span class="input__icon">
+                            <div class="icon icon_calendar"></div></span>
+                        </div>
+                      </label>
+              </div>
+              <div class="editor-input editor-input_timeperiod">
+                <div class="editor-input editor-input_time">
+                        <label class="input-wrapper">
+                          <div class="input__label">Начало</div>
+                          <div class="input__element">
+                            <input class="input" type="text" placeholder="Начало в" value="16:00"/>
+                          </div>
+                        </label>
+                </div>
+                <div class="editor-input editor-input_divider"><span>—</span></div>
+                <div class="editor-input editor-input_time">
+                        <label class="input-wrapper">
+                          <div class="input__label">Конец</div>
+                          <div class="input__element">
+                            <input class="input" type="text" placeholder="Конец в" value="16:30"/>
+                          </div>
+                        </label>
+                </div>
+              </div>
+            </fieldgroup>
           </div>
+          <div class="editor-body__column">Участники</div>
+          <div class="editor-body__column">Рекомендованные переговорки</div>
         </div>
         <div class="editor-controls">
           <div class="editor-controls__buttons">

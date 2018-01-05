@@ -1,3 +1,5 @@
+include ../input/input
+
 section.editor
   header.editor-header
     h2.editor-header__title Новая встреча
@@ -6,11 +8,22 @@ section.editor
 
   .editor-body
     .editor-body__column
-      p Тема
-      p Участники
+      .editor-input
+        +input("Тема", "О чём будете говорить?")
     .editor-body__column
-      p Дата
-      p Рекомендованные переговорки
+      fieldgroup.editor-body__fieldrow
+        .editor-input.editor-input_date
+          +input("Дата", "Дата", "14 декабря, 2017", "calendar")
+        .editor-input.editor-input_timeperiod
+          .editor-input.editor-input_time
+            +input("Начало", "Начало в", "16:00")
+          .editor-input.editor-input_divider
+            span —
+          .editor-input.editor-input_time
+            +input("Конец", "Конец в", "16:30")
+    .editor-body__column Участники
+    .editor-body__column Рекомендованные переговорки
+        
 
   .editor-controls
     .editor-controls__buttons
