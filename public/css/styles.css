@@ -121,6 +121,223 @@ body {
     width: 32px;
   }
 }
+.datechanger,
+.datechanger__date,
+.datechanger__control_next,
+.datechanger-datepicker {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.datechanger {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  padding: 11px 0;
+}
+
+@media screen and (max-width: 420px) {
+  .datechanger {
+    padding: 12px 16px;
+  }
+}
+
+.datechanger__date {
+  text-align: center;
+  font-family: HelveticaNeue-Medium;
+  font-size: 15px;
+  color: #000000;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+.datechanger__control_next {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.datechanger-datepicker {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+}
+
+.datechanger:focus .datechanger__date {
+  color: #0070e0;
+}
+
+.datechanger:focus .datepicker {
+  display: block;
+}
+.calendar-weekday,
+.calendar-day,
+.calendar-weekdays,
+.calendar-week,
+.calendar,
+.calendar-month,
+.calendar-month__label,
+.calendar-weekday,
+.calendar-week_first,
+.calendar-day,
+.calendar-day_weekend,
+.calendar-day_holiday,
+.calendar-day_active {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.calendar-weekday,
+.calendar-day {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  -ms-flex-preferred-size: 30px;
+  flex-basis: 30px;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.calendar-weekdays,
+.calendar-week {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.calendar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 420px) {
+  .calendar {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .calendar-month {
+    margin-bottom: 20px;
+  }
+}
+
+.calendar-month__label {
+  width: 100%;
+  margin: 8px 0;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 420px) {
+  .calendar-weekday {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    -ms-flex-preferred-size: 48px;
+    flex-basis: 48px;
+  }
+}
+
+.calendar-week_first {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.calendar-day {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 420px) {
+  .calendar-day {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    -ms-flex-preferred-size: 48px;
+    flex-basis: 48px;
+  }
+}
+
+.calendar-day:hover {
+  border-radius: 100%;
+  background: #eee;
+}
+
+.calendar-day_weekend {
+  color: #d1d1d1;
+}
+
+.calendar-day_holiday {
+  color: red;
+}
+
+.calendar-day_active {
+  border-radius: 100%;
+  background: #007dff;
+  color: #fff;
+  font-family: HelveticaNeue-Medium;
+}
+
+.calendar-day_active:hover {
+  border-radius: 100%;
+  background: #007dff;
+}
+.datepicker {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.datepicker {
+  width: 720px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 1px 8px 0 rgba(0, 44, 92, 0.28);
+  box-shadow: 0 1px 8px 0 rgba(0, 44, 92, 0.28);
+  border-radius: 4px;
+  padding: 16px;
+  outline: none;
+  display: none;
+}
+
+@media screen and (max-width: 420px) {
+  .datepicker {
+    width: 100%;
+    height: 380px;
+    overflow-y: scroll;
+  }
+}
 .header,
 .header__content,
 .header__logo,
@@ -173,47 +390,93 @@ body {
     display: none;
   }
 }
-.datepicker,
-.datepicker__date,
-.datepicker__control_next {
+.popup,
+.popup-overlay,
+.popup__icon,
+.popup__title,
+.popup__content-text,
+.popup__actions {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.datepicker {
+.popup {
+  padding: 32px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 1px 16px 0 rgba(0, 44, 92, 0.28);
+  box-shadow: 0 1px 16px 0 rgba(0, 44, 92, 0.28);
+  border-radius: 8px;
+  width: 445px;
+}
+
+.popup-overlay {
   width: 100%;
+  height: 100%;
+  background: rgba(0, 16, 33, 0.4);
+  z-index: 100;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  top: 0;
+  left: 0;
 }
 
-.datepicker__date {
+@media screen and (max-width: 420px) {
+  .popup-overlay {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+}
+
+.popup__icon {
+  font-size: 40px;
   text-align: center;
-  font-family: HelveticaNeue-Medium;
-  font-size: 15px;
+  margin-bottom: 17px;
+}
+
+.popup__title {
   color: #000000;
-  line-height: 18px;
-  cursor: pointer;
+  font-family: HelveticaNeue-Bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 8px;
+  width: 320px;
+  margin: 0 auto;
 }
 
-.datepicker__date:focus {
-  color: #0070e0;
+.popup__content-text {
+  margin-bottom: 8px;
+  text-align: center;
 }
 
-.datepicker__control_next {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
+.popup__actions {
+  margin-top: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 420px) {
+  .popup {
+    width: 100%;
+    margin-bottom: 24px;
+  }
 }
 .schedule,
-.schedule-datepicker,
 .schedule-datepicker_mobile,
 .schedule-nav,
 .schedule-nav__content,
@@ -272,10 +535,6 @@ body {
   width: 100%;
 }
 
-.schedule-datepicker {
-  padding: 12px 16px;
-}
-
 .schedule-datepicker_mobile {
   display: none;
 }
@@ -292,14 +551,7 @@ body {
 }
 
 .schedule-nav__content {
-  padding: 11px 0;
   background: #fff;
-}
-
-@media screen and (max-width: 420px) {
-  .schedule-nav__content {
-    padding: 0;
-  }
 }
 
 .schedule-nav__date {
@@ -676,92 +928,6 @@ body {
 @media screen and (max-width: 420px) {
   .room {
     margin-bottom: 2px;
-  }
-}
-.popup,
-.popup-overlay,
-.popup__icon,
-.popup__title,
-.popup__content-text,
-.popup__actions {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.popup {
-  padding: 32px;
-  background: #ffffff;
-  -webkit-box-shadow: 0 1px 16px 0 rgba(0, 44, 92, 0.28);
-  box-shadow: 0 1px 16px 0 rgba(0, 44, 92, 0.28);
-  border-radius: 8px;
-  width: 445px;
-}
-
-.popup-overlay {
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 16, 33, 0.4);
-  z-index: 100;
-  position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  top: 0;
-  left: 0;
-}
-
-@media screen and (max-width: 420px) {
-  .popup-overlay {
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-  }
-}
-
-.popup__icon {
-  font-size: 40px;
-  text-align: center;
-  margin-bottom: 17px;
-}
-
-.popup__title {
-  color: #000000;
-  font-family: HelveticaNeue-Bold;
-  font-size: 20px;
-  line-height: 24px;
-  text-align: center;
-  margin-bottom: 8px;
-  width: 320px;
-  margin: 0 auto;
-}
-
-.popup__content-text {
-  margin-bottom: 8px;
-  text-align: center;
-}
-
-.popup__actions {
-  margin-top: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-@media screen and (max-width: 420px) {
-  .popup {
-    width: 100%;
-    margin-bottom: 24px;
   }
 }
 .tooltip,

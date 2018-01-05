@@ -1,0 +1,104 @@
+$cellWidth: 30px;
+$cellHeight: 30px;
+
+$mobileCellWidth: 48px;
+$mobileCellHeight: 48px;
+
+@define-extend cell {
+  width: $cellWidth;
+  height: $cellHeight;
+  line-height: $cellHeight;
+  flex-basis: $cellWidth;
+  flex-grow: 0;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+@define-extend row {
+  display: flex;
+}
+
+.calendar {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: 420px) {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &-month {
+    @media screen and (max-width: 420px) {
+      margin-bottom: 20px;
+    }
+
+    &__label {
+      width: 100%;
+      margin: 8px 0;
+      text-align: center;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &-weekdays {
+    @extend row;
+  }
+
+  &-weekday {
+    @extend cell;
+
+    @media screen and (max-width: 420px) {
+      width: $mobileCellWidth;
+      height: $mobileCellHeight;
+      line-height: $mobileCellHeight;
+      flex-basis: $mobileCellWidth;
+    }
+  }
+
+  &-week {
+    @extend row;
+
+    &_first {
+      justify-content: flex-end;
+    }
+  }
+
+  &-day {
+    @extend cell;
+    cursor: pointer;
+
+    @media screen and (max-width: 420px) {
+      width: $mobileCellWidth;
+      height: $mobileCellHeight;
+      line-height: $mobileCellHeight;
+      flex-basis: $mobileCellWidth;
+    }
+
+    &:hover {
+      border-radius: 100%;
+      background: #eee;
+    }
+
+    &_weekend {
+      color: #d1d1d1;
+    }
+
+    &_holiday {
+      color: red;
+    }
+
+    &_active {
+      border-radius: 100%;
+      background: #007dff;
+      color: #fff;
+      font-family: HelveticaNeue-Medium;
+
+      &:hover {
+        border-radius: 100%;
+        background: #007dff;
+      }
+    }
+  }
+}
