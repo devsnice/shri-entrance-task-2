@@ -15,18 +15,19 @@
     position: relative;
   }
 
-  &__label {
-    font-family: HelveticaNeue-Bold;
-    font-size: 13px;
-    line-height: 16px;
-    margin-bottom: 4px;
-  }
-
   &__icon {
     position: absolute;
     right: 12px;
     bottom: 50%;
     transform: translateY(50%);
+
+    &_rotate_270 {
+      transform: translateY(50%) rotate(270deg);
+    }
+
+    &_rotate_90 {
+      transform: translateY(50%) rotate(90deg);
+    }
   }
 
   &::placeholder {

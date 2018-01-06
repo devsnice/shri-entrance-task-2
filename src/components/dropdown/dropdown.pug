@@ -1,0 +1,21 @@
+include ../input/input
+include ../person/person
+
+.dropdown
+  +input("Участники", "Например, Тор Одинович", null, "arrow", "arrow input__icon_rotate_270")
+  .dropdown__content
+    .dropdown-list
+      .dropdown-list__item
+        +person("Дарт Вейдер", "7 этаж")
+      .dropdown-list__item
+        +person("Дарт Вейдер", "5 этаж")
+      .dropdown-list__item
+        +person("Дарт Вейдер", "13 этаж")
+      .dropdown-list__item
+        +person("Дарт Вейдер", "11 этаж")
+      .dropdown-list__item
+        +person("Дарт Вейдер", "4 этаж")
+      .dropdown-list__item
+        +person("Дарт Вейдер", "1 этаж")
+      .dropdown-list__item
+        +person("Дарт Вейдер", "4 этаж")
