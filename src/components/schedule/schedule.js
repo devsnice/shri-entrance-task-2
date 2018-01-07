@@ -50,6 +50,8 @@
   const init = () => {
     const schedule = document.getElementById('schedule');
 
+    if (!schedule) return null;
+
     schedule.addEventListener('scroll', e => {
       if (schedule.scrollLeft > 50) {
         const newPosition = schedule.scrollLeft;

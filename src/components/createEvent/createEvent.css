@@ -46,6 +46,14 @@
         padding-right: 16px;
       }
 
+      &_mobile {
+        display: none;
+
+        @media screen and (max-width: 420px) {
+          display: block;
+        }
+      }
+
       &_mobile_border {
         @media screen and (max-width: 420px) {
           border-color: #e9ecef;
@@ -56,6 +64,11 @@
           border-right-width: 0;
           padding-bottom: 16px;
         }
+      }
+
+      &_fullwidth {
+        padding: 0;
+        margin-top: -16px;
       }
     }
 
