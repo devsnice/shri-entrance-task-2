@@ -54,6 +54,12 @@
         }
       }
 
+      &_desktop {
+        @media screen and (max-width: 420px) {
+          display: none;
+        }
+      }
+
       &_mobile_border {
         @media screen and (max-width: 420px) {
           border-color: #e9ecef;

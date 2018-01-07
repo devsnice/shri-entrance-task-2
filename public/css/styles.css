@@ -117,6 +117,146 @@ button {
 .button_mr_16 {
   margin-right: 16px;
 }
+.calendar-weekday,
+.calendar-day {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  -ms-flex-preferred-size: 30px;
+  flex-basis: 30px;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.calendar-weekdays,
+.calendar-week {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.calendar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 420px) {
+  .calendar {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .calendar-month {
+    margin-bottom: 20px;
+  }
+}
+
+.calendar-month__label {
+  width: 100%;
+  margin: 8px 0;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 420px) {
+  .calendar-weekday {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    -ms-flex-preferred-size: 48px;
+    flex-basis: 48px;
+  }
+}
+
+.calendar-week_first {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.calendar-day {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 420px) {
+  .calendar-day {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    -ms-flex-preferred-size: 48px;
+    flex-basis: 48px;
+  }
+}
+
+.calendar-day:hover {
+  border-radius: 100%;
+  background: #eee;
+}
+
+.calendar-day_weekend {
+  color: #d1d1d1;
+}
+
+.calendar-day_holiday {
+  color: red;
+}
+
+.calendar-day_active {
+  border-radius: 100%;
+  background: #007dff;
+  color: #fff;
+  font-family: HelveticaNeue-Medium;
+}
+
+.calendar-day_active:hover {
+  border-radius: 100%;
+  background: #007dff;
+}
+.control {
+  border: none;
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  border-radius: 100%;
+  background: #e9ecef;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.control:hover {
+  background: #dcdfe1;
+}
+
+@media screen and (max-width: 420px) {
+  .control_arrow {
+    height: 32px;
+    width: 32px;
+  }
+}
 .editor {
   padding: 32px 0;
   width: 876px;
@@ -192,6 +332,12 @@ button {
 @media screen and (max-width: 420px) {
   .editor-body__column_mobile {
     display: block;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .editor-body__column_desktop {
+    display: none;
   }
 }
 
@@ -330,164 +476,6 @@ button {
     padding: 0 16px;
   }
 }
-.control {
-  border: none;
-  cursor: pointer;
-  height: 24px;
-  width: 24px;
-  border-radius: 100%;
-  background: #e9ecef;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.control:hover {
-  background: #dcdfe1;
-}
-
-@media screen and (max-width: 420px) {
-  .control_arrow {
-    height: 32px;
-    width: 32px;
-  }
-}
-.calendar-weekday,
-.calendar-day {
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  -ms-flex-preferred-size: 30px;
-  flex-basis: 30px;
-  -webkit-box-flex: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  text-align: center;
-  font-size: 14px;
-}
-
-.calendar-weekdays,
-.calendar-week {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.calendar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-@media screen and (max-width: 420px) {
-  .calendar {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  .calendar-month {
-    margin-bottom: 20px;
-  }
-}
-
-.calendar-month__label {
-  width: 100%;
-  margin: 8px 0;
-  text-align: center;
-  font-size: 16px;
-  line-height: 20px;
-}
-
-@media screen and (max-width: 420px) {
-  .calendar-weekday {
-    width: 48px;
-    height: 48px;
-    line-height: 48px;
-    -ms-flex-preferred-size: 48px;
-    flex-basis: 48px;
-  }
-}
-
-.calendar-week_first {
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-.calendar-day {
-  cursor: pointer;
-}
-
-@media screen and (max-width: 420px) {
-  .calendar-day {
-    width: 48px;
-    height: 48px;
-    line-height: 48px;
-    -ms-flex-preferred-size: 48px;
-    flex-basis: 48px;
-  }
-}
-
-.calendar-day:hover {
-  border-radius: 100%;
-  background: #eee;
-}
-
-.calendar-day_weekend {
-  color: #d1d1d1;
-}
-
-.calendar-day_holiday {
-  color: red;
-}
-
-.calendar-day_active {
-  border-radius: 100%;
-  background: #007dff;
-  color: #fff;
-  font-family: HelveticaNeue-Medium;
-}
-
-.calendar-day_active:hover {
-  border-radius: 100%;
-  background: #007dff;
-}
-.datepicker {
-  width: 720px;
-  background: #ffffff;
-  -webkit-box-shadow: 0 1px 8px 0 rgba(0, 44, 92, 0.28);
-  box-shadow: 0 1px 8px 0 rgba(0, 44, 92, 0.28);
-  border-radius: 4px;
-  padding: 16px;
-  outline: none;
-  display: none;
-}
-
-@media screen and (max-width: 420px) {
-  .datepicker {
-    width: 100%;
-    height: 380px;
-    overflow-y: scroll;
-  }
-}
 .datechanger {
   width: 100%;
   height: 100%;
@@ -538,6 +526,24 @@ button {
 
 .datechanger:focus .datepicker {
   display: block;
+}
+.datepicker {
+  width: 720px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 1px 8px 0 rgba(0, 44, 92, 0.28);
+  box-shadow: 0 1px 8px 0 rgba(0, 44, 92, 0.28);
+  border-radius: 4px;
+  padding: 16px;
+  outline: none;
+  display: none;
+}
+
+@media screen and (max-width: 420px) {
+  .datepicker {
+    width: 100%;
+    height: 380px;
+    overflow-y: scroll;
+  }
 }
 .dropdown {
   position: relative;
