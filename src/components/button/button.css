@@ -1,3 +1,17 @@
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-appearance: button; /* for input */
+  -webkit-user-select: none; /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
 .button {
   border-radius: 4px;
   font-size: 13px;
@@ -6,7 +20,6 @@
   padding: 0 16px;
   font-family: HelveticaNeue-Medium;
   cursor: pointer;
-  border: none;
 
   @media screen and (max-width: 420px) {
     height: 44px;

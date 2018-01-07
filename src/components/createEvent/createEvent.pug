@@ -1,4 +1,5 @@
 include ../input/input
+include ../label/label
 
 section.editor
   header.editor-header
@@ -10,6 +11,7 @@ section.editor
     .editor-body__column
       .editor-input
         +input("Тема", "О чём будете говорить?")
+
     .editor-body__column
       fieldgroup.editor-body__fieldrow
         .editor-input.editor-input_date
@@ -21,10 +23,14 @@ section.editor
             span —
           .editor-input.editor-input_time
             +input("Конец", "Конец в", "16:30")
-    .editor-body__column Участники
-    .editor-body__column Рекомендованные переговорки
-        
 
+    .editor-body__column
+      .editor-input.editor-input_members
+         include ../membersMultiselect/membersMultiselect
+    
+    .editor-body__column
+      +label("Рекомендованные переговорки")
+        
   .editor-controls
     .editor-controls__buttons
       .button.button_grey.button_mr_16 Отмена

@@ -11,6 +11,7 @@
     width: 100%;
     padding: 4px;
     display: none;
+    z-index: 50;
   }
 
   &-list {

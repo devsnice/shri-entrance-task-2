@@ -32,7 +32,9 @@
           <div class="editor-body__column">
             <div class="editor-input">
                     <label class="input-wrapper">
-                      <div class="input__label">Тема</div>
+                      <div class="input__label">
+                              <div class="label">Тема</div>
+                      </div>
                       <div class="input__element">
                         <input class="input" type="text" placeholder="О чём будете говорить?"/>
                       </div>
@@ -43,9 +45,11 @@
             <fieldgroup class="editor-body__fieldrow">
               <div class="editor-input editor-input_date">
                       <label class="input-wrapper">
-                        <div class="input__label">Дата</div>
+                        <div class="input__label">
+                                <div class="label">Дата</div>
+                        </div>
                         <div class="input__element">
-                          <input class="input" type="text" placeholder="Дата" value="14 декабря, 2017"/><span class="input__icon">
+                          <input class="input" type="text" placeholder="Дата" value="14 декабря, 2017"/><span class="input__icon input__icon_undefined">
                             <div class="icon icon_calendar"></div></span>
                         </div>
                       </label>
@@ -53,7 +57,9 @@
               <div class="editor-input editor-input_timeperiod">
                 <div class="editor-input editor-input_time">
                         <label class="input-wrapper">
-                          <div class="input__label">Начало</div>
+                          <div class="input__label">
+                                  <div class="label">Начало</div>
+                          </div>
                           <div class="input__element">
                             <input class="input" type="text" placeholder="Начало в" value="16:00"/>
                           </div>
@@ -62,7 +68,9 @@
                 <div class="editor-input editor-input_divider"><span>—</span></div>
                 <div class="editor-input editor-input_time">
                         <label class="input-wrapper">
-                          <div class="input__label">Конец</div>
+                          <div class="input__label">
+                                  <div class="label">Конец</div>
+                          </div>
                           <div class="input__element">
                             <input class="input" type="text" placeholder="Конец в" value="16:30"/>
                           </div>
@@ -71,8 +79,73 @@
               </div>
             </fieldgroup>
           </div>
-          <div class="editor-body__column">Участники</div>
-          <div class="editor-body__column">Рекомендованные переговорки</div>
+          <div class="editor-body__column">
+            <div class="editor-input editor-input_members">
+              <div class="multiselect">
+                <div class="dropdown">
+                                  <label class="input-wrapper">
+                                    <div class="input__label">
+                                                      <div class="label">Участники</div>
+                                    </div>
+                                    <div class="input__element">
+                                      <input class="input" type="text" placeholder="Например, Тор Одинович"/><span class="input__icon input__icon_arrow input__icon_rotate_270">
+                                        <div class="icon icon_arrow"></div></span>
+                                    </div>
+                                  </label>
+                  <div class="dropdown__content">
+                    <div class="dropdown-list">
+                      <div class="dropdown-list__item">
+                                        <div class="person"><img class="person__avatar" src="./images/avatar.jpg" alt="Дарт Вейдер"/><span class="person__name">Дарт Вейдер</span><span class="person__separator"> · </span><span class="person__description">7 этаж</span></div>
+                      </div>
+                      <div class="dropdown-list__item">
+                                        <div class="person"><img class="person__avatar" src="./images/avatar.jpg" alt="Дарт Вейдер"/><span class="person__name">Дарт Вейдер</span><span class="person__separator"> · </span><span class="person__description">5 этаж</span></div>
+                      </div>
+                      <div class="dropdown-list__item">
+                                        <div class="person"><img class="person__avatar" src="./images/avatar.jpg" alt="Дарт Вейдер"/><span class="person__name">Дарт Вейдер</span><span class="person__separator"> · </span><span class="person__description">13 этаж</span></div>
+                      </div>
+                      <div class="dropdown-list__item">
+                                        <div class="person"><img class="person__avatar" src="./images/avatar.jpg" alt="Дарт Вейдер"/><span class="person__name">Дарт Вейдер</span><span class="person__separator"> · </span><span class="person__description">11 этаж</span></div>
+                      </div>
+                      <div class="dropdown-list__item">
+                                        <div class="person"><img class="person__avatar" src="./images/avatar.jpg" alt="Дарт Вейдер"/><span class="person__name">Дарт Вейдер</span><span class="person__separator"> · </span><span class="person__description">4 этаж</span></div>
+                      </div>
+                      <div class="dropdown-list__item">
+                                        <div class="person"><img class="person__avatar" src="./images/avatar.jpg" alt="Дарт Вейдер"/><span class="person__name">Дарт Вейдер</span><span class="person__separator"> · </span><span class="person__description">1 этаж</span></div>
+                      </div>
+                      <div class="dropdown-list__item">
+                                        <div class="person"><img class="person__avatar" src="./images/avatar.jpg" alt="Дарт Вейдер"/><span class="person__name">Дарт Вейдер</span><span class="person__separator"> · </span><span class="person__description">4 этаж</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="multiselect__selection">
+                                <div class="multiselect-selected"><img class="multiselect-selected__avatar" src="./images/avatar.jpg"/><span class="multiselect-selected__name">Дарт Вейдер Второй</span>
+                                  <button class="multiselect-selected__close">
+                                    <div class="icon icon_close"></div>
+                                  </button>
+                                </div>
+                                <div class="multiselect-selected"><img class="multiselect-selected__avatar" src="./images/avatar.jpg"/><span class="multiselect-selected__name">Дарт Вейдер</span>
+                                  <button class="multiselect-selected__close">
+                                    <div class="icon icon_close"></div>
+                                  </button>
+                                </div>
+                                <div class="multiselect-selected"><img class="multiselect-selected__avatar" src="./images/avatar.jpg"/><span class="multiselect-selected__name">Дарт Вейдер Третий</span>
+                                  <button class="multiselect-selected__close">
+                                    <div class="icon icon_close"></div>
+                                  </button>
+                                </div>
+                                <div class="multiselect-selected"><img class="multiselect-selected__avatar" src="./images/avatar.jpg"/><span class="multiselect-selected__name">Дарт Вейдер</span>
+                                  <button class="multiselect-selected__close">
+                                    <div class="icon icon_close"></div>
+                                  </button>
+                                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="editor-body__column">
+                            <div class="label">Рекомендованные переговорки</div>
+          </div>
         </div>
         <div class="editor-controls">
           <div class="editor-controls__buttons">
