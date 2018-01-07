@@ -15,17 +15,25 @@ button {
 .button {
   border-radius: 4px;
   font-size: 13px;
-  height: 36px;
-  line-height: 36px;
-  padding: 0 16px;
   font-family: HelveticaNeue-Medium;
   cursor: pointer;
 
   @media screen and (max-width: 420px) {
-    height: 44px;
-    line-height: 44px;
     font-size: 15px;
-    padding: 0 24px;
+  }
+
+  &_size {
+    &_default {
+      height: 36px;
+      line-height: 36px;
+      padding: 0 16px;
+
+      @media screen and (max-width: 420px) {
+        height: 44px;
+        line-height: 44px;
+        padding: 0 24px;
+      }
+    }
   }
 
   &_blue {

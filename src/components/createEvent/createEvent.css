@@ -2,10 +2,11 @@
   padding: 32px 0;
   width: 876px;
   @util center-block;
+  margin-bottom: 75px;
 
   @media screen and (max-width: 420px) {
     width: 100%;
-    padding: 24px 16px;
+    padding: 24px 0;
   }
 
   &-header {
@@ -23,6 +24,10 @@
         display: none;
       }
     }
+
+    @media screen and (max-width: 420px) {
+      padding: 0 16px;
+    }
   }
 
   &-body {
@@ -37,6 +42,20 @@
       @media screen and (max-width: 420px) {
         width: 100%;
         margin-bottom: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      &_mobile_border {
+        @media screen and (max-width: 420px) {
+          border-color: #e9ecef;
+          border-style: solid;
+          border-top-width: 0;
+          border-bottom-width: 8px;
+          border-left-width: 0;
+          border-right-width: 0;
+          padding-bottom: 16px;
+        }
       }
     }
 

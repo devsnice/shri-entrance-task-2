@@ -1,5 +1,6 @@
 include ../input/input
 include ../label/label
+include ../eventRecommendation/eventRecommendation
 
 section.editor
   header.editor-header
@@ -12,7 +13,7 @@ section.editor
       .editor-input
         +input("Тема", "О чём будете говорить?")
 
-    .editor-body__column
+    .editor-body__column.editor-body__column_mobile_border
       fieldgroup.editor-body__fieldrow
         .editor-input.editor-input_date
           +input("Дата", "Дата", "14 декабря, 2017", "calendar")
@@ -24,15 +25,19 @@ section.editor
           .editor-input.editor-input_time
             +input("Конец", "Конец в", "16:30")
 
-    .editor-body__column
+    .editor-body__column.editor-body__column_mobile_border
       .editor-input.editor-input_members
          include ../membersMultiselect/membersMultiselect
     
-    .editor-body__column
+    .editor-body__column.editor-body__column_mobile_border
       +label("Рекомендованные переговорки")
-        
+      .editor-recomendations
+        +recommendation("16:30 — 17:00", "Готем · 4 этаж")
+        +recommendation("17:30 — 18:00", "Поле непаханное · 4 этаж")
+        +recommendation("16:30 — 17:00", "Тёмная башня · 4 этаж")
+
   .editor-controls
     .editor-controls__buttons
-      .button.button_grey.button_mr_16 Отмена
+      .button.button_size_default.button_grey.button_mr_16 Отмена
       a(href="/eventCreated.html") 
-        .button.button_blue Создать встречу
+        .button.button_size_default.button_blue Создать встречу

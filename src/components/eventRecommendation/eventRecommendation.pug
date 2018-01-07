@@ -1,0 +1,12 @@
+mixin recommendation(time, name, active)
+  if active
+    div.button.button_blue.event-recommendation(tabindex=0)
+      .event-recommendation__data
+        span.event-recommendation__time= time
+        span.event-recommendation__name= name
+      button.event-recommendation__close
+        .icon.icon_close
+  else
+    div.button.button_grey.event-recommendation.event-recommendation_active(tabindex=0)
+      span.event-recommendation__time= time
+      span.event-recommendation__name= name
