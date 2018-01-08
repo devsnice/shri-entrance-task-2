@@ -1,3 +1,5 @@
+@import '../../../styleVariables.css';
+
 .control {
   border: none;
   cursor: pointer;
@@ -14,7 +16,7 @@
   }
 
   &_arrow {
-    @media screen and (max-width: 420px) {
+    $mediaIsMobile {
       height: 32px;
       width: 32px;
     }

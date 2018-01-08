@@ -1,3 +1,4 @@
+
 html,
 body {
   width: 100%;
@@ -32,11 +33,9 @@ body {
   margin-bottom: 75px;
 }
 
-@media screen and (max-width: 420px) {
-  .editor {
-    width: 100%;
-    padding: 24px 0;
-  }
+.editor @media screen and (max-width: 420px) {
+  width: 100%;
+  padding: 24px 0;
 }
 
 .editor-header {
@@ -54,16 +53,12 @@ body {
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 420px) {
-  .editor-header__close {
-    display: none;
-  }
+.editor-header__close @media screen and (max-width: 420px) {
+  display: none;
 }
 
-@media screen and (max-width: 420px) {
-  .editor-header {
-    padding: 0 16px;
-  }
+.editor-header @media screen and (max-width: 420px) {
+  padding: 0 16px;
 }
 
 .editor-body {
@@ -82,41 +77,33 @@ body {
   margin-bottom: 24px;
 }
 
-@media screen and (max-width: 420px) {
-  .editor-body__column {
-    width: 100%;
-    margin-bottom: 16px;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+.editor-body__column @media screen and (max-width: 420px) {
+  width: 100%;
+  margin-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .editor-body__column_mobile {
   display: none;
 }
 
-@media screen and (max-width: 420px) {
-  .editor-body__column_mobile {
-    display: block;
-  }
+.editor-body__column_mobile @media screen and (max-width: 420px) {
+  display: block;
 }
 
-@media screen and (max-width: 420px) {
-  .editor-body__column_desktop {
-    display: none;
-  }
+.editor-body__column_desktop @media screen and (max-width: 420px) {
+  display: none;
 }
 
-@media screen and (max-width: 420px) {
-  .editor-body__column_mobile_border {
-    border-color: #e9ecef;
-    border-style: solid;
-    border-top-width: 0;
-    border-bottom-width: 8px;
-    border-left-width: 0;
-    border-right-width: 0;
-    padding-bottom: 16px;
-  }
+.editor-body__column_mobile_border @media screen and (max-width: 420px) {
+  border-color: #e9ecef;
+  border-style: solid;
+  border-top-width: 0;
+  border-bottom-width: 8px;
+  border-left-width: 0;
+  border-right-width: 0;
+  padding-bottom: 16px;
 }
 
 .editor-body__column_fullwidth {
@@ -134,19 +121,15 @@ body {
   justify-content: space-between;
 }
 
-@media screen and (max-width: 420px) {
-  .editor-body__fieldrow {
-    display: block;
-  }
+.editor-body__fieldrow @media screen and (max-width: 420px) {
+  display: block;
 }
 
-@media screen and (max-width: 420px) {
-  .editor-body {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
+.editor-body @media screen and (max-width: 420px) {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .editor-input {
@@ -163,10 +146,8 @@ body {
   margin-right: 16px;
 }
 
-@media screen and (max-width: 420px) {
-  .editor-input_date {
-    margin-right: 0;
-  }
+.editor-input_date @media screen and (max-width: 420px) {
+  margin-right: 0;
 }
 
 .editor-input_time {
@@ -174,16 +155,14 @@ body {
   flex-basis: 72px;
 }
 
-@media screen and (max-width: 420px) {
-  .editor-input_time {
-    -ms-flex-preferred-size: 0;
-    flex-basis: 0;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    -ms-flex-negative: 1;
-    flex-shrink: 1;
-  }
+.editor-input_time @media screen and (max-width: 420px) {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
 }
 
 .editor-input_timeperiod {
@@ -195,10 +174,8 @@ body {
   align-items: flex-end;
 }
 
-@media screen and (max-width: 420px) {
-  .editor-input_timeperiod {
-    margin-top: 8px;
-  }
+.editor-input_timeperiod @media screen and (max-width: 420px) {
+  margin-top: 8px;
 }
 
 .editor-input_divider {
@@ -234,13 +211,11 @@ body {
   height: 100%;
 }
 
-@media screen and (max-width: 420px) {
-  .editor-controls__buttons {
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    padding: 0 16px;
-  }
+.editor-controls__buttons @media screen and (max-width: 420px) {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 0 16px;
 }
 .room {
   display: -webkit-box;
@@ -258,13 +233,11 @@ body {
   width: 245px;
 }
 
-@media screen and (max-width: 420px) {
-  .room__description {
-    width: 181px;
-    background: #fff;
-    height: 58px;
-    padding: 12px 25px 0 16px;
-  }
+.room__description @media screen and (max-width: 420px) {
+  width: 181px;
+  background: #fff;
+  height: 58px;
+  padding: 12px 25px 0 16px;
 }
 
 .room__label {
@@ -359,11 +332,9 @@ body {
   display: block;
 }
 
-@media screen and (max-width: 420px) {
-  .room-schedule {
-    height: 58px;
-    width: calc(100% - 145px);
-  }
+.room-schedule @media screen and (max-width: 420px) {
+  height: 58px;
+  width: calc(100% - 145px);
 }
 
 .room_reserved .room__label {
@@ -378,10 +349,8 @@ body {
   color: #0070e0;
 }
 
-@media screen and (max-width: 420px) {
-  .room {
-    margin-bottom: 2px;
-  }
+.room @media screen and (max-width: 420px) {
+  margin-bottom: 2px;
 }
 .schedule {
   height: calc(100% - 72px);
@@ -392,10 +361,8 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 420px) {
-  .schedule-datepicker_mobile {
-    display: block;
-  }
+.schedule-datepicker_mobile @media screen and (max-width: 420px) {
+  display: block;
 }
 
 .schedule-nav {
@@ -412,19 +379,15 @@ body {
   padding: 0 24px 0 0;
 }
 
-@media screen and (max-width: 420px) {
-  .schedule-nav__date {
-    display: none;
-  }
+.schedule-nav__date @media screen and (max-width: 420px) {
+  display: none;
 }
 
-@media screen and (max-width: 420px) {
-  .schedule-nav__timeline {
-    width: 1280px;
-    height: 32px;
-    border-top: 1px solid #e9ecef;
-    background: #fff;
-  }
+.schedule-nav__timeline @media screen and (max-width: 420px) {
+  width: 1280px;
+  height: 32px;
+  border-top: 1px solid #e9ecef;
+  background: #fff;
 }
 
 .schedule-timeline {
@@ -440,10 +403,8 @@ body {
   position: relative;
 }
 
-@media screen and (max-width: 420px) {
-  .schedule-timeline {
-    height: calc(100% - 56px);
-  }
+.schedule-timeline @media screen and (max-width: 420px) {
+  height: calc(100% - 56px);
 }
 
 .schedule-grid {
@@ -459,10 +420,8 @@ body {
   top: 0;
 }
 
-@media screen and (max-width: 420px) {
-  .schedule-grid__inner {
-    left: 145px;
-  }
+.schedule-grid__inner @media screen and (max-width: 420px) {
+  left: 145px;
 }
 
 .schedule-grid__legend {
@@ -545,11 +504,9 @@ body {
   top: -12px;
 }
 
-@media screen and (max-width: 420px) {
-  .schedule-grid__legend_hour_current {
-    height: calc(100% + 6px);
-    top: -6px;
-  }
+.schedule-grid__legend_hour_current @media screen and (max-width: 420px) {
+  height: calc(100% + 6px);
+  top: -6px;
 }
 
 .schedule-grid__legend-hour {
@@ -564,10 +521,8 @@ body {
   color: #252525;
 }
 
-@media screen and (max-width: 420px) {
-  .schedule-grid__legend-hour {
-    margin-bottom: 10px;
-  }
+.schedule-grid__legend-hour @media screen and (max-width: 420px) {
+  margin-bottom: 10px;
 }
 
 .schedule-grid__legend-hour_current {
@@ -581,10 +536,8 @@ body {
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 420px) {
-  .schedule-grid__legend-hour_current {
-    margin-bottom: 0;
-  }
+.schedule-grid__legend-hour_current @media screen and (max-width: 420px) {
+  margin-bottom: 0;
 }
 
 .schedule-grid__legend-hour_past {
@@ -606,16 +559,34 @@ body {
   height: 100%;
 }
 
-@media screen and (max-width: 420px) {
-  .schedule-stages__underlayer {
-    display: none;
-  }
+.schedule-stages__underlayer @media screen and (max-width: 420px) {
+  display: none;
 }
 
-@media screen and (max-width: 420px) {
-  .schedule {
-    height: calc(100% - 48px);
-  }
+.schedule @media screen and (max-width: 420px) {
+  height: calc(100% - 48px);
+}
+.stage {
+  position: relative;
+  padding-top: 21px;
+}
+
+.stage__label {
+  font-family: HelveticaNeue-Bold;
+  font-size: 11px;
+  color: #858e98;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  position: relative;
+  will-change: left;
+}
+
+.stage__label @media screen and (max-width: 420px) {
+  padding-left: 16px;
+}
+
+.stage__rooms {
+  margin-top: 8px;
 }
 button {
   background: none;
@@ -639,10 +610,8 @@ button {
   cursor: pointer;
 }
 
-@media screen and (max-width: 420px) {
-  .button {
-    font-size: 15px;
-  }
+.button @media screen and (max-width: 420px) {
+  font-size: 15px;
 }
 
 .button_size_default {
@@ -651,12 +620,10 @@ button {
   padding: 0 16px;
 }
 
-@media screen and (max-width: 420px) {
-  .button_size_default {
-    height: 44px;
-    line-height: 44px;
-    padding: 0 24px;
-  }
+.button_size_default @media screen and (max-width: 420px) {
+  height: 44px;
+  line-height: 44px;
+  padding: 0 24px;
 }
 
 .button_size_big {
@@ -743,22 +710,18 @@ button {
   justify-content: space-between;
 }
 
-@media screen and (max-width: 420px) {
-  .calendar {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
+.calendar @media screen and (max-width: 420px) {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
-@media screen and (max-width: 420px) {
-  .calendar-month {
-    margin-bottom: 20px;
-  }
+.calendar-month @media screen and (max-width: 420px) {
+  margin-bottom: 20px;
 }
 
 .calendar-month__label {
@@ -769,14 +732,12 @@ button {
   line-height: 20px;
 }
 
-@media screen and (max-width: 420px) {
-  .calendar-weekday {
-    width: 48px;
-    height: 48px;
-    line-height: 48px;
-    -ms-flex-preferred-size: 48px;
-    flex-basis: 48px;
-  }
+.calendar-weekday @media screen and (max-width: 420px) {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  -ms-flex-preferred-size: 48px;
+  flex-basis: 48px;
 }
 
 .calendar-week_first {
@@ -789,14 +750,12 @@ button {
   cursor: pointer;
 }
 
-@media screen and (max-width: 420px) {
-  .calendar-day {
-    width: 48px;
-    height: 48px;
-    line-height: 48px;
-    -ms-flex-preferred-size: 48px;
-    flex-basis: 48px;
-  }
+.calendar-day @media screen and (max-width: 420px) {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  -ms-flex-preferred-size: 48px;
+  flex-basis: 48px;
 }
 
 .calendar-day:hover {
@@ -845,11 +804,9 @@ button {
   background: #dcdfe1;
 }
 
-@media screen and (max-width: 420px) {
-  .control_arrow {
-    height: 32px;
-    width: 32px;
-  }
+.control_arrow @media screen and (max-width: 420px) {
+  height: 32px;
+  width: 32px;
 }
 .datechanger {
   width: 100%;
@@ -867,10 +824,8 @@ button {
   padding: 11px 0;
 }
 
-@media screen and (max-width: 420px) {
-  .datechanger {
-    padding: 12px 16px;
-  }
+.datechanger @media screen and (max-width: 420px) {
+  padding: 12px 16px;
 }
 
 .datechanger__date {
@@ -913,12 +868,10 @@ button {
   display: none;
 }
 
-@media screen and (max-width: 420px) {
-  .datepicker {
-    width: 100%;
-    height: 380px;
-    overflow-y: scroll;
-  }
+.datepicker @media screen and (max-width: 420px) {
+  width: 100%;
+  height: 380px;
+  overflow-y: scroll;
 }
 .dropdown {
   position: relative;
@@ -980,21 +933,17 @@ button {
   text-align: left;
 }
 
-@media screen and (max-width: 420px) {
-  .event-recommendation {
-    height: 44px;
-    line-height: 44px;
-  }
+.event-recommendation @media screen and (max-width: 420px) {
+  height: 44px;
+  line-height: 44px;
 }
 
 .event-recommendation__data {
   font-size: 13px;
 }
 
-@media screen and (max-width: 420px) {
-  .event-recommendation__data {
-    font-size: 15px;
-  }
+.event-recommendation__data @media screen and (max-width: 420px) {
+  font-size: 15px;
 }
 
 .event-recommendation__time {
@@ -1035,26 +984,20 @@ button {
   max-width: 1280px;
 }
 
-@media screen and (max-width: 420px) {
-  .header__content {
-    padding: 15px 20px 11px;
-  }
+.header__content @media screen and (max-width: 420px) {
+  padding: 15px 20px 11px;
 }
 
-@media screen and (max-width: 420px) {
-  .header__logo {
-    height: 21px;
-  }
-
-  .header__logo-image {
-    height: 21px;
-  }
+.header__logo @media screen and (max-width: 420px) {
+  height: 21px;
 }
 
-@media screen and (max-width: 420px) {
-  .header__controls {
-    display: none;
-  }
+.header__logo @media screen and (max-width: 420px)-image {
+  height: 21px;
+}
+
+.header__controls @media screen and (max-width: 420px) {
+  display: none;
 }
 .input {
   background: #ffffff;
@@ -1066,10 +1009,8 @@ button {
   font-size: 15px;
 }
 
-@media screen and (max-width: 420px) {
-  .input {
-    height: 44px;
-  }
+.input @media screen and (max-width: 420px) {
+  height: 44px;
 }
 
 .input__element {
@@ -1133,11 +1074,9 @@ button {
   margin-bottom: 8px;
 }
 
-@media screen and (max-width: 420px) {
-  .multiselect-selected {
-    width: 100%;
-    height: 32px;
-  }
+.multiselect-selected @media screen and (max-width: 420px) {
+  width: 100%;
+  height: 32px;
 }
 
 .multiselect-selected__avatar {
@@ -1147,11 +1086,9 @@ button {
   border-radius: 100%;
 }
 
-@media screen and (max-width: 420px) {
-  .multiselect-selected__avatar {
-    width: 32px;
-    height: 32px;
-  }
+.multiselect-selected__avatar @media screen and (max-width: 420px) {
+  width: 32px;
+  height: 32px;
 }
 
 .multiselect-selected__name {
@@ -1161,11 +1098,9 @@ button {
   line-height: 24px;
 }
 
-@media screen and (max-width: 420px) {
-  .multiselect-selected__name {
-    font-size: 15px;
-    line-height: 32px;
-  }
+.multiselect-selected__name @media screen and (max-width: 420px) {
+  font-size: 15px;
+  line-height: 32px;
 }
 
 .multiselect-selected__close {
@@ -1177,10 +1112,8 @@ button {
   cursor: pointer;
 }
 
-@media screen and (max-width: 420px) {
-  .multiselect-selected__close {
-    right: 14px;
-  }
+.multiselect-selected__close @media screen and (max-width: 420px) {
+  right: 14px;
 }
 .person {
   display: -webkit-box;
@@ -1197,21 +1130,17 @@ button {
   margin-right: 8px;
 }
 
-@media screen and (max-width: 420px) {
-  .person__avatar_mobile_big {
-    width: 32px;
-    height: 32px;
-  }
+.person__avatar_mobile_big @media screen and (max-width: 420px) {
+  width: 32px;
+  height: 32px;
 }
 
 .person__name {
   font-size: 13px;
 }
 
-@media screen and (max-width: 420px) {
-  .person__name {
-    font-size: 15px;
-  }
+.person__name @media screen and (max-width: 420px) {
+  font-size: 15px;
 }
 
 .person__separator {
@@ -1223,10 +1152,8 @@ button {
   color: #c7c7c7;
 }
 
-@media screen and (max-width: 420px) {
-  .person__description {
-    font-size: 15px;
-  }
+.person__description @media screen and (max-width: 420px) {
+  font-size: 15px;
 }
 
 .person_float_left {
@@ -1261,12 +1188,10 @@ button {
   left: 0;
 }
 
-@media screen and (max-width: 420px) {
-  .popup-overlay {
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-  }
+.popup-overlay @media screen and (max-width: 420px) {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 .popup__icon {
@@ -1301,11 +1226,9 @@ button {
   justify-content: center;
 }
 
-@media screen and (max-width: 420px) {
-  .popup {
-    width: 100%;
-    margin-bottom: 24px;
-  }
+.popup @media screen and (max-width: 420px) {
+  width: 100%;
+  margin-bottom: 24px;
 }
 .tooltip {
   background: #ffffff;
@@ -1354,11 +1277,9 @@ button {
   margin-bottom: 2px;
 }
 
-@media screen and (max-width: 420px) {
-  .tooltip__title {
-    font-size: 20px;
-    margin-bottom: 8px;
-  }
+.tooltip__title @media screen and (max-width: 420px) {
+  font-size: 20px;
+  margin-bottom: 8px;
 }
 
 .tooltip__description {
@@ -1367,10 +1288,8 @@ button {
   line-height: 17px;
 }
 
-@media screen and (max-width: 420px) {
-  .tooltip__description {
-    font-size: 15px;
-  }
+.tooltip__description @media screen and (max-width: 420px) {
+  font-size: 15px;
 }
 
 .tooltip-people {
@@ -1382,15 +1301,11 @@ button {
   font-size: 13px;
 }
 
-@media screen and (max-width: 420px) {
-  .tooltip-people__rest {
-    font-size: 15px;
-  }
+.tooltip-people__rest @media screen and (max-width: 420px) {
+  font-size: 15px;
 }
 
-@media screen and (max-width: 420px) {
-  .tooltip {
-    width: 360px;
-    left: calc(50% - 180px);
-  }
+.tooltip @media screen and (max-width: 420px) {
+  width: 360px;
+  left: calc(50% - 180px);
 }

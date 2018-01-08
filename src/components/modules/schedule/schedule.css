@@ -1,3 +1,5 @@
+@import '../../../styleVariables.css';
+
 .schedule {
   height: calc(100% - 72px);
   width: 100%;
@@ -6,7 +8,7 @@
     &_mobile {
       display: none;
 
-      @media screen and (max-width: 420px) {
+      $mediaIsMobile {
         display: block;
       }
     }
@@ -24,13 +26,13 @@
       width: 245px;
       padding: 0 24px 0 0;
 
-      @media screen and (max-width: 420px) {
+      $mediaIsMobile {
         display: none;
       }
     }
 
     &__timeline {
-      @media screen and (max-width: 420px) {
+      $mediaIsMobile {
         width: 1280px;
         height: 32px;
         border-top: 1px solid #e9ecef;
@@ -49,7 +51,7 @@
     overflow-y: visible;
     position: relative;
 
-    @media screen and (max-width: 420px) {
+    $mediaIsMobile {
       height: calc(100% - 56px);
     }
   }
@@ -65,7 +67,7 @@
       left: 245px;
       top: 0;
 
-      @media screen and (max-width: 420px) {
+      $mediaIsMobile {
         left: 145px;
       }
     }
@@ -90,7 +92,7 @@
         height: calc(100% + 12px);
         top: -12px;
 
-        @media screen and (max-width: 420px) {
+        $mediaIsMobile {
           height: calc(100% + 6px);
           top: -6px;
         }
@@ -102,11 +104,11 @@
         margin-bottom: 16px;
         font-size: 11px;
         transform: translateX(-50%);
-        font-family: HelveticaNeue-Bold;
+        font-family: $fontBold;
         letter-spacing: 0.4px;
         color: #252525;
 
-        @media screen and (max-width: 420px) {
+        $mediaIsMobile {
           margin-bottom: 10px;
         }
 
@@ -120,7 +122,7 @@
           border-radius: 100px;
           margin-bottom: 0;
 
-          @media screen and (max-width: 420px) {
+          $mediaIsMobile {
             margin-bottom: 0;
           }
         }
@@ -145,13 +147,13 @@
       background: #fff;
       height: 100%;
 
-      @media screen and (max-width: 420px) {
+      $mediaIsMobile {
         display: none;
       }
     }
   }
 
-  @media screen and (max-width: 420px) {
+  $mediaIsMobile {
     height: calc(100% - 48px);
   }
 }

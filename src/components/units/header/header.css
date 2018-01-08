@@ -1,3 +1,5 @@
+@import '../../../styleVariables.css';
+
 .header {
   background: #fff;
   border-bottom: 1px solid #e9ecef;
@@ -10,13 +12,13 @@
     width: 100%;
     max-width: 1280px;
 
-    @media screen and (max-width: 420px) {
+    $mediaIsMobile {
       padding: 15px 20px 11px;
     }
   }
 
   &__logo {
-    @media screen and (max-width: 420px) {
+    $mediaIsMobile {
       height: 21px;
 
       &-image {
@@ -26,7 +28,7 @@
   }
 
   &__controls {
-    @media screen and (max-width: 420px) {
+    $mediaIsMobile {
       display: none;
     }
   }

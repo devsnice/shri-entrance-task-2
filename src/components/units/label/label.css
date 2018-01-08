@@ -1,5 +1,7 @@
+@import '../../../styleVariables.css';
+
 .label {
-  font-family: HelveticaNeue-Bold;
+  font-family: $fontBold;
   font-size: 13px;
   line-height: 16px;
   margin-bottom: 4px;

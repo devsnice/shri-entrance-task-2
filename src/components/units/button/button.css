@@ -1,3 +1,5 @@
+@import '../../../styleVariables.css';
+
 button {
   background: none;
   border: 0;
@@ -14,10 +16,10 @@ button {
 
 .button {
   font-size: 13px;
-  font-family: HelveticaNeue-Medium;
+  font-family: $fontMedium;
   cursor: pointer;
 
-  @media screen and (max-width: 420px) {
+  $mediaIsMobile {
     font-size: 15px;
   }
 
@@ -27,7 +29,7 @@ button {
       line-height: 36px;
       padding: 0 16px;
 
-      @media screen and (max-width: 420px) {
+      $mediaIsMobile {
         height: 44px;
         line-height: 44px;
         padding: 0 24px;

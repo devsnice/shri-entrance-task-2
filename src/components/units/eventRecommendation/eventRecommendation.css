@@ -1,3 +1,5 @@
+@import '../../../styleVariables.css';
+
 .event-recommendation {
   border-radius: 4px;
   height: 37px;
@@ -8,7 +10,7 @@
   width: 100%;
   text-align: left;
 
-  @media screen and (max-width: 420px) {
+  $mediaIsMobile {
     height: 44px;
     line-height: 44px;
   }
@@ -16,19 +18,19 @@
   &__data {
     font-size: 13px;
 
-    @media screen and (max-width: 420px) {
+    $mediaIsMobile {
       font-size: 15px;
     }
   }
 
   &__time {
-    font-family: HelveticaNeue-Bold;
+    font-family: $fontBold;
     margin-right: 16px;
     display: inline-block;
   }
 
   &__name {
-    font-family: HelveticaNeue;
+    font-family: $fontDefault;
   }
 
   &__close {

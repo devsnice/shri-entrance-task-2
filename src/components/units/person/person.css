@@ -1,3 +1,5 @@
+@import '../../../styleVariables.css';
+
 .person {
   display: flex;
   height: 24px;
@@ -10,7 +12,7 @@
     margin-right: 8px;
 
     &_mobile_big {
-      @media screen and (max-width: 420px) {
+      $mediaIsMobile {
         width: 32px;
         height: 32px;
       }
@@ -20,7 +22,7 @@
   &__name {
     font-size: 13px;
 
-    @media screen and (max-width: 420px) {
+    $mediaIsMobile {
       font-size: 15px;
     }
   }
@@ -33,7 +35,7 @@
     font-size: 13px;
     color: #c7c7c7;
 
-    @media screen and (max-width: 420px) {
+    $mediaIsMobile {
       font-size: 15px;
     }
   }

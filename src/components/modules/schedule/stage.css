@@ -1,9 +1,11 @@
+@import '../../../styleVariables.css';
+
 .stage {
   position: relative;
   padding-top: 21px;
 
   &__label {
-    font-family: HelveticaNeue-Bold;
+    font-family: $fontBold;
     font-size: 11px;
     color: #858e98;
     letter-spacing: 0.4px;
@@ -11,7 +13,7 @@
     position: relative;
     will-change: left;
 
-    @media screen and (max-width: 420px) {
+    $mediaIsMobile {
       padding-left: 16px;
     }
   }

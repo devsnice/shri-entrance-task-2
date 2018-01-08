@@ -1,3 +1,5 @@
+@import '../../../styleVariables.css';
+
 $cellWidth: 30px;
 $cellHeight: 30px;
 
@@ -23,13 +25,13 @@ $mobileCellHeight: 48px;
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width: 420px) {
+  $mediaIsMobile {
     align-items: center;
     flex-direction: column;
   }
 
   &-month {
-    @media screen and (max-width: 420px) {
+    $mediaIsMobile {
       margin-bottom: 20px;
     }
 
@@ -49,7 +51,7 @@ $mobileCellHeight: 48px;
   &-weekday {
     @extend cell;
 
-    @media screen and (max-width: 420px) {
+    $mediaIsMobile {
       width: $mobileCellWidth;
       height: $mobileCellHeight;
       line-height: $mobileCellHeight;
@@ -69,7 +71,7 @@ $mobileCellHeight: 48px;
     @extend cell;
     cursor: pointer;
 
-    @media screen and (max-width: 420px) {
+    $mediaIsMobile {
       width: $mobileCellWidth;
       height: $mobileCellHeight;
       line-height: $mobileCellHeight;
@@ -93,7 +95,7 @@ $mobileCellHeight: 48px;
       border-radius: 100%;
       background: #007dff;
       color: #fff;
-      font-family: HelveticaNeue-Medium;
+      font-family: $fontMedium;
 
       &:hover {
         border-radius: 100%;

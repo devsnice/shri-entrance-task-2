@@ -1,3 +1,5 @@
+@import '../../../styleVariables.css';
+
 .tooltip {
   background: #ffffff;
   box-shadow: 0 1px 16px 0 rgba(0, 44, 92, 0.28);
@@ -37,13 +39,13 @@
   }
 
   &__title {
-    font-family: HelveticaNeue-Bold;
+    font-family: $fontBold;
     font-size: 15px;
     color: #000000;
     line-height: 24px;
     margin-bottom: 2px;
 
-    @media screen and (max-width: 420px) {
+    $mediaIsMobile {
       font-size: 20px;
       margin-bottom: 8px;
     }
@@ -54,7 +56,7 @@
     color: #000000;
     line-height: 17px;
 
-    @media screen and (max-width: 420px) {
+    $mediaIsMobile {
       font-size: 15px;
     }
   }
@@ -66,13 +68,13 @@
       color: #858e98;
       font-size: 13px;
 
-      @media screen and (max-width: 420px) {
+      $mediaIsMobile {
         font-size: 15px;
       }
     }
   }
 
-  @media screen and (max-width: 420px) {
+  $mediaIsMobile {
     width: 360px;
     left: calc(50% - 180px);
   }

@@ -1,3 +1,5 @@
+@import '../../../styleVariables.css';
+
 .popup {
   padding: 32px;
   background: #ffffff;
@@ -17,7 +19,7 @@
     top: 0;
     left: 0;
 
-    @media screen and (max-width: 420px) {
+    $mediaIsMobile {
       align-items: flex-end;
     }
   }
@@ -30,7 +32,7 @@
 
   &__title {
     color: #000000;
-    font-family: HelveticaNeue-Bold;
+    font-family: $fontBold;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
@@ -52,7 +54,7 @@
     justify-content: center;
   }
 
-  @media screen and (max-width: 420px) {
+  $mediaIsMobile {
     width: 100%;
     margin-bottom: 24px;
   }

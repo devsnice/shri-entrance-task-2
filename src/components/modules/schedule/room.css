@@ -1,3 +1,5 @@
+@import '../../../styleVariables.css';
+
 .room {
   display: flex;
   margin-bottom: 16px;
@@ -10,7 +12,7 @@
   &__description {
     width: 245px;
 
-    @media screen and (max-width: 420px) {
+    $mediaIsMobile {
       width: 181px;
       background: #fff;
       height: 58px;
@@ -19,7 +21,7 @@
   }
 
   &__label {
-    font-family: HelveticaNeue-Medium;
+    font-family: $fontMedium;
     font-size: 15px;
     line-height: 17px;
     white-space: nowrap;
@@ -30,7 +32,7 @@
       background: #ffffff;
       box-shadow: 0 1px 8px 0 rgba(0, 44, 92, 0.28);
       border-radius: 4px;
-      font-family: HelveticaNeue-Bold;
+      font-family: $fontBold;
       font-size: 11px;
       color: #262626;
       letter-spacing: 0.4px;
@@ -107,7 +109,7 @@
       }
     }
 
-    @media screen and (max-width: 420px) {
+    $mediaIsMobile {
       height: 58px;
       width: calc(100% - 145px);
     }
@@ -129,7 +131,7 @@
     }
   }
 
-  @media screen and (max-width: 420px) {
+  $mediaIsMobile {
     margin-bottom: 2px;
   }
 }
