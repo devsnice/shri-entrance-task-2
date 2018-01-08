@@ -242,6 +242,147 @@ body {
     padding: 0 16px;
   }
 }
+.room {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 16px;
+  width: 1280px;
+}
+
+.room:last-child {
+  margin-bottom: 0;
+}
+
+.room__description {
+  width: 245px;
+}
+
+@media screen and (max-width: 420px) {
+  .room__description {
+    width: 181px;
+    background: #fff;
+    height: 58px;
+    padding: 12px 25px 0 16px;
+  }
+}
+
+.room__label {
+  font-family: HelveticaNeue-Medium;
+  font-size: 15px;
+  line-height: 17px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.room__label_float {
+  background: #ffffff;
+  -webkit-box-shadow: 0 1px 8px 0 rgba(0, 44, 92, 0.28);
+  box-shadow: 0 1px 8px 0 rgba(0, 44, 92, 0.28);
+  border-radius: 4px;
+  font-family: HelveticaNeue-Bold;
+  font-size: 11px;
+  color: #262626;
+  letter-spacing: 0.4px;
+  padding: 0 8px;
+  position: relative;
+  z-index: 2;
+  will-change: left;
+}
+
+.room__capacity {
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.room-schedule {
+  height: 28px;
+  background: #fff;
+  width: calc(100% - 245px);
+  position: relative;
+}
+
+.room-schedule__interval {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  cursor: pointer;
+}
+
+.room-schedule__interval_reserved {
+  background-color: #d5dfe9;
+  width: 250px;
+  left: 23px;
+}
+
+.room-schedule__interval_reserved:hover {
+  background-color: #98a9b9;
+}
+
+.room-schedule__interval_reserved:focus {
+  background-color: #98a9b9;
+}
+
+.room-schedule__interval_free {
+  background-color: #fff;
+  width: 95px;
+  left: 273px;
+}
+
+.room-schedule__interval_free:hover {
+  background-color: #1d54fe;
+  border-radius: 2px;
+  position: relative;
+}
+
+.room-schedule__interval_free:hover:before {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #fff;
+}
+
+.room-schedule__interval_free_pressed {
+  background-color: #1d00fe;
+}
+
+.room-schedule__interval:focus {
+  outline: none;
+}
+
+.room-schedule__interval:focus .tooltip {
+  display: block;
+}
+
+@media screen and (max-width: 420px) {
+  .room-schedule {
+    height: 58px;
+    width: calc(100% - 145px);
+  }
+}
+
+.room_reserved .room__label {
+  color: #858e98;
+}
+
+.room_reserved .room__capacity {
+  color: #858e98;
+}
+
+.room_focused .room__label {
+  color: #0070e0;
+}
+
+@media screen and (max-width: 420px) {
+  .room {
+    margin-bottom: 2px;
+  }
+}
 .schedule {
   height: calc(100% - 72px);
   width: 100%;
@@ -474,173 +615,6 @@ body {
 @media screen and (max-width: 420px) {
   .schedule {
     height: calc(100% - 48px);
-  }
-}
-
-.stage {
-  position: relative;
-  padding-top: 21px;
-}
-
-.stage__label {
-  font-family: HelveticaNeue-Bold;
-  font-size: 11px;
-  color: #858e98;
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
-  position: relative;
-  will-change: left;
-}
-
-@media screen and (max-width: 420px) {
-  .stage__label {
-    padding-left: 16px;
-  }
-}
-
-.stage__rooms {
-  margin-top: 8px;
-}
-
-.room {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 16px;
-  width: 1280px;
-}
-
-.room:last-child {
-  margin-bottom: 0;
-}
-
-.room__description {
-  width: 245px;
-}
-
-@media screen and (max-width: 420px) {
-  .room__description {
-    width: 181px;
-    background: #fff;
-    height: 58px;
-    padding: 12px 25px 0 16px;
-  }
-}
-
-.room__label {
-  font-family: HelveticaNeue-Medium;
-  font-size: 15px;
-  line-height: 17px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.room__label_float {
-  background: #ffffff;
-  -webkit-box-shadow: 0 1px 8px 0 rgba(0, 44, 92, 0.28);
-  box-shadow: 0 1px 8px 0 rgba(0, 44, 92, 0.28);
-  border-radius: 4px;
-  font-family: HelveticaNeue-Bold;
-  font-size: 11px;
-  color: #262626;
-  letter-spacing: 0.4px;
-  padding: 0 8px;
-  position: relative;
-  z-index: 2;
-  will-change: left;
-}
-
-.room__capacity {
-  font-size: 13px;
-  line-height: 17px;
-}
-
-.room-schedule {
-  height: 28px;
-  background: #fff;
-  width: calc(100% - 245px);
-  position: relative;
-}
-
-.room-schedule__interval {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  cursor: pointer;
-}
-
-.room-schedule__interval_reserved {
-  background-color: #d5dfe9;
-  width: 250px;
-  left: 23px;
-}
-
-.room-schedule__interval_reserved:hover {
-  background-color: #98a9b9;
-}
-
-.room-schedule__interval_reserved:focus {
-  background-color: #98a9b9;
-}
-
-.room-schedule__interval_free {
-  background-color: #fff;
-  width: 95px;
-  left: 273px;
-}
-
-.room-schedule__interval_free:hover {
-  background-color: #1d54fe;
-  border-radius: 2px;
-  position: relative;
-}
-
-.room-schedule__interval_free:hover:before {
-  content: '+';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-size: 20px;
-  color: #fff;
-}
-
-.room-schedule__interval_free_pressed {
-  background-color: #1d00fe;
-}
-
-.room-schedule__interval:focus {
-  outline: none;
-}
-
-.room-schedule__interval:focus .tooltip {
-  display: block;
-}
-
-@media screen and (max-width: 420px) {
-  .room-schedule {
-    height: 58px;
-    width: calc(100% - 145px);
-  }
-}
-
-.room_reserved .room__label {
-  color: #858e98;
-}
-
-.room_reserved .room__capacity {
-  color: #858e98;
-}
-
-.room_focused .room__label {
-  color: #0070e0;
-}
-
-@media screen and (max-width: 420px) {
-  .room {
-    margin-bottom: 2px;
   }
 }
 button {

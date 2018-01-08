@@ -1,0 +1,22 @@
+.stage {
+  position: relative;
+  padding-top: 21px;
+
+  &__label {
+    font-family: HelveticaNeue-Bold;
+    font-size: 11px;
+    color: #858e98;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    position: relative;
+    will-change: left;
+
+    @media screen and (max-width: 420px) {
+      padding-left: 16px;
+    }
+  }
+
+  &__rooms {
+    margin-top: 8px;
+  }
+}

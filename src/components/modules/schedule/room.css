@@ -1,0 +1,135 @@
+.room {
+  display: flex;
+  margin-bottom: 16px;
+  width: 1280px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__description {
+    width: 245px;
+
+    @media screen and (max-width: 420px) {
+      width: 181px;
+      background: #fff;
+      height: 58px;
+      padding: 12px 25px 0 16px;
+    }
+  }
+
+  &__label {
+    font-family: HelveticaNeue-Medium;
+    font-size: 15px;
+    line-height: 17px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    &_float {
+      background: #ffffff;
+      box-shadow: 0 1px 8px 0 rgba(0, 44, 92, 0.28);
+      border-radius: 4px;
+      font-family: HelveticaNeue-Bold;
+      font-size: 11px;
+      color: #262626;
+      letter-spacing: 0.4px;
+      padding: 0 8px;
+      position: relative;
+      z-index: 2;
+      will-change: left;
+    }
+  }
+
+  &__capacity {
+    font-size: 13px;
+    line-height: 17px;
+  }
+
+  &-schedule {
+    height: 28px;
+    background: #fff;
+    width: calc(100% - 245px);
+    position: relative;
+
+    &__interval {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      cursor: pointer;
+
+      &_reserved {
+        background-color: #d5dfe9;
+        width: 250px;
+        left: 23px;
+
+        &:hover {
+          background-color: #98a9b9;
+        }
+
+        &:focus {
+          background-color: #98a9b9;
+        }
+      }
+
+      &_free {
+        background-color: #fff;
+        width: 95px;
+        left: 273px;
+
+        &:hover {
+          background-color: #1d54fe;
+          border-radius: 2px;
+          position: relative;
+
+          &:before {
+            content: '+';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            color: #fff;
+          }
+        }
+
+        &_pressed {
+          background-color: #1d00fe;
+        }
+      }
+
+      &:focus {
+        outline: none;
+
+        .tooltip {
+          display: block;
+        }
+      }
+    }
+
+    @media screen and (max-width: 420px) {
+      height: 58px;
+      width: calc(100% - 145px);
+    }
+  }
+
+  &_reserved {
+    .room__label {
+      color: #858e98;
+    }
+
+    .room__capacity {
+      color: #858e98;
+    }
+  }
+
+  &_focused {
+    .room__label {
+      color: #0070e0;
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    margin-bottom: 2px;
+  }
+}
