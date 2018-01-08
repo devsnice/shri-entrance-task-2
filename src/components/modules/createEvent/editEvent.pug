@@ -1,17 +1,17 @@
-include ../input/input
-include ../label/label
-include ../eventRecommendation/eventRecommendation
+include ../../units/input/input
+include ../../units/label/label
+include ../../units/eventRecommendation/eventRecommendation
 
 section.editor
   header.editor-header
-    h2.editor-header__title Новая встреча
+    h2.editor-header__title Редактирование встречи
     .editor-header__close
-      include ../control/closeControl.pug
+      include ../../units/control/closeControl.pug
 
   .editor-body
     .editor-body__column
       .editor-input
-        +input("Тема", "О чём будете говорить?", "Тестовое задание в ШРИ")
+        +input("Тема", "О чём будете говорить?")
 
     // Date and time block for mobile devices
     .editor-body__column.editor-body__column_mobile_border.editor-body__column_mobile
@@ -41,17 +41,22 @@ section.editor
 
     .editor-body__column.editor-body__column_mobile_border
       .editor-input.editor-input_members
-         include ../membersMultiselect/membersMultiselect
+         include ../../units/membersMultiselect/membersMultiselect
     
     .editor-body__column.editor-body__column_mobile_border
-      +label("Рекомендованные переговорки")
+      +label("Ваша переговорка")
       .editor-recomendations
-        +recommendation("16:30 — 17:00", "Готем · 4 этаж")
-        +recommendation("17:30 — 18:00", "Поле непаханное · 4 этаж")
-        +recommendation("16:30 — 17:00", "Тёмная башня · 4 этаж")
+        - var isActive=true
+        +recommendation("16:30 — 17:00", "Готем · 4 этаж", isActive)
+
+    .editor-body__column.editor-body__column_mobile.editor-body__column_mobile_border.editor-body__column_fullwidth
+      button.button.button_size_big.button_warning Удалить встречу
+      
 
   .editor-controls
     .editor-controls__buttons
       .button.button_size_default.button_grey.button_mr_16 Отмена
+      a(href="/eventWillDelete.html") 
+        .button.button_size_default.button_grey.button_mr_16 Удалить встречу
       a(href="/eventCreated.html") 
-        .button.button_size_default.button_blue Создать встречу
+        .button.button_size_default.button_blue Сохранить

@@ -1,11 +1,11 @@
 .schedule
   .schedule-datepicker.schedule-datepicker_mobile
-    include ../datechanger/datechanger.pug
+    include ../../units/datechanger/datechanger.pug
   .schedule-timeline#schedule
     .schedule-nav
       .schedule-nav__content
         .schedule-nav__date
-          include ../datechanger/datechanger.pug
+          include ../../units/datechanger/datechanger.pug
         .schedule-nav__timeline
         
     .schedule-grid
@@ -35,7 +35,7 @@
               .room__capacity 56 человек
             .room-schedule
               a.room-schedule__interval.room-schedule__interval_reserved(tabindex=0)
-                include ../tooltip/tooltip.pug
+                include ../../units/tooltip/tooltip.pug
               .room-schedule__interval.room-schedule__interval_free
           .room.room_focused
             .room__description

@@ -14,7 +14,7 @@
 
   &-nav {
     border-bottom: 1px solid #e9ecef;
-    width: 100%;
+    width: 1280px;
 
     &__content {
       background: #fff;
@@ -56,7 +56,7 @@
 
   &-grid {
     position: absolute;
-    height: 100%;
+    height: calc(100% - 47px);
 
     &__inner {
       position: absolute;
@@ -133,6 +133,7 @@
   }
 
   &-stages {
+    height: calc(100% - 47px);
     width: 100%;
     position: relative;
 
