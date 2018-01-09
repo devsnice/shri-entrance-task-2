@@ -1,9 +1,11 @@
+include ../icon/icon
+
 mixin selected(name)
   .multiselect-selected
       img.multiselect-selected__avatar(src="./images/avatar.jpg", alt= selected__name)
       span.multiselect-selected__name= name
       button.multiselect-selected__close
-        .icon.icon_close
+        +icon("close")
 
 .multiselect
    include ../dropdown/dropdown
