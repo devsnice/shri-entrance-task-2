@@ -8,20 +8,23 @@
     @util center-block;
     display: flex;
     justify-content: space-between;
-    padding: 18px 24px 17px;
+    padding: 0 24px;
     width: 100%;
     max-width: 1280px;
+    height: 71px;
+    align-items: center;
 
     @media screen and (max-width: $mobileMaxWidth) {
-      padding: 15px 20px 11px;
+      padding: 0 20px;
+      height: 47px;
     }
   }
 
   &__logo {
-    @media screen and (max-width: $mobileMaxWidth) {
-      height: 21px;
+    &-image {
+      height: 26px;
 
-      &-image {
+      @media screen and (max-width: $mobileMaxWidth) {
         height: 21px;
       }
     }
