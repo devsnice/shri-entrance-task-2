@@ -1,4 +1,8 @@
 const gulp = require('gulp');
+const gulpSequence = require('gulp-sequence');
+
+const path = require('path');
+
 const pug = require('gulp-pug');
 
 const postcss = require('gulp-postcss');
@@ -6,7 +10,9 @@ const autoprefixer = require('autoprefixer');
 const concatCss = require('gulp-concat-css');
 const cssUtilities = require('postcss-utilities');
 const precss = require('precss');
-const svgSprite = require('gulp-svg-sprites');
+
+const svgSymbols = require('gulp-svg-symbols');
+const svgmin = require('gulp-svgmin');
 
 const concat = require('gulp-concat');
 const flatten = require('gulp-flatten');
@@ -27,8 +33,8 @@ const paths = {
     Pug to HTML
 */
 
-gulp.task('pug', () => {
-  return gulp
+gulp.task('pug', () =>
+  gulp
     .src(paths.pages)
     .pipe(
       pug({
@@ -36,8 +42,8 @@ gulp.task('pug', () => {
         pretty: true
       })
     )
-    .pipe(gulp.dest(paths.public));
-});
+    .pipe(gulp.dest(paths.public))
+);
 
 /*
     PostCSS
@@ -61,12 +67,12 @@ gulp.task('css', () => {
     Scripts
 */
 
-gulp.task('scripts', () => {
-  return gulp
+gulp.task('scripts', () =>
+  gulp
     .src(paths.scripts)
     .pipe(concat('main.js'))
-    .pipe(gulp.dest(`${paths.public}/scripts`));
-});
+    .pipe(gulp.dest(`${paths.public}/scripts`))
+);
 
 /*
     Images
@@ -86,12 +92,13 @@ gulp.task('images', () =>
 gulp.task('icons', () =>
   gulp
     .src(paths.icons)
+    .pipe(svgmin())
     .pipe(
-      svgSprite({
-        selector: 'icon_%f'
+      svgSymbols({
+        templates: ['default-svg']
       })
     )
-    .pipe(gulp.dest(`${paths.public}`))
+    .pipe(gulp.dest(`./src/layout/css`))
 );
 
 /*
@@ -127,13 +134,14 @@ gulp.task('watch', () => {
 });
 
 gulp.task(
-  'default',
-  ['pug', 'css', 'watch', 'scripts', 'images', 'icons'],
-  () => {
-    browserSync.init({
-      server: {
-        baseDir: paths.public
-      }
-    });
-  }
+  'sequence-gulp',
+  gulpSequence('icons', ['pug', 'css', 'scripts', 'images', 'watch'])
 );
+
+gulp.task('default', ['sequence-gulp'], () => {
+  browserSync.init({
+    server: {
+      baseDir: paths.public
+    }
+  });
+});
