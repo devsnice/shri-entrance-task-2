@@ -12,7 +12,7 @@
     margin-right: 8px;
 
     &_mobile_big {
-      $mediaIsMobile {
+      @media screen and (max-width: $mobileMaxWidth) {
         width: 32px;
         height: 32px;
       }
@@ -22,7 +22,7 @@
   &__name {
     font-size: 13px;
 
-    $mediaIsMobile {
+    @media screen and (max-width: $mobileMaxWidth) {
       font-size: 15px;
     }
   }
@@ -35,7 +35,7 @@
     font-size: 13px;
     color: #c7c7c7;
 
-    $mediaIsMobile {
+    @media screen and (max-width: $mobileMaxWidth) {
       font-size: 15px;
     }
   }

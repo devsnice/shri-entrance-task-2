@@ -11,14 +11,25 @@
   justify-content: center;
   align-items: center;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     background: #dcdfe1;
+
+    .icon {
+      opacity: 1;
+    }
   }
 
   &_arrow {
-    $mediaIsMobile {
+    @media screen and (max-width: $mobileMaxWidth) {
       height: 32px;
       width: 32px;
+
+      .icon {
+        width: 14px;
+        height: 14px;
+      }
     }
   }
 }

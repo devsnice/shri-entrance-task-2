@@ -19,7 +19,7 @@
     top: 0;
     left: 0;
 
-    $mediaIsMobile {
+    @media screen and (max-width: $mobileMaxWidth) {
       align-items: flex-end;
     }
   }
@@ -54,7 +54,7 @@
     justify-content: center;
   }
 
-  $mediaIsMobile {
+  @media screen and (max-width: $mobileMaxWidth) {
     width: 100%;
     margin-bottom: 24px;
   }

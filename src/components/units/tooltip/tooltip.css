@@ -45,7 +45,7 @@
     line-height: 24px;
     margin-bottom: 2px;
 
-    $mediaIsMobile {
+    @media screen and (max-width: $mobileMaxWidth) {
       font-size: 20px;
       margin-bottom: 8px;
     }
@@ -56,7 +56,7 @@
     color: #000000;
     line-height: 17px;
 
-    $mediaIsMobile {
+    @media screen and (max-width: $mobileMaxWidth) {
       font-size: 15px;
     }
   }
@@ -68,13 +68,13 @@
       color: #858e98;
       font-size: 13px;
 
-      $mediaIsMobile {
+      @media screen and (max-width: $mobileMaxWidth) {
         font-size: 15px;
       }
     }
   }
 
-  $mediaIsMobile {
+  @media screen and (max-width: $mobileMaxWidth) {
     width: 360px;
     left: calc(50% - 180px);
   }

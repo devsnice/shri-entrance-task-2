@@ -9,7 +9,7 @@
   padding: 0 10px;
   font-size: 15px;
 
-  $mediaIsMobile {
+  @media screen and (max-width: $mobileMaxWidth) {
     height: 44px;
   }
 

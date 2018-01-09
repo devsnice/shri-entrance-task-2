@@ -25,13 +25,13 @@ $mobileCellHeight: 48px;
   display: flex;
   justify-content: space-between;
 
-  $mediaIsMobile {
+  @media screen and (max-width: $mobileMaxWidth) {
     align-items: center;
     flex-direction: column;
   }
 
   &-month {
-    $mediaIsMobile {
+    @media screen and (max-width: $mobileMaxWidth) {
       margin-bottom: 20px;
     }
 
@@ -51,7 +51,7 @@ $mobileCellHeight: 48px;
   &-weekday {
     @extend cell;
 
-    $mediaIsMobile {
+    @media screen and (max-width: $mobileMaxWidth) {
       width: $mobileCellWidth;
       height: $mobileCellHeight;
       line-height: $mobileCellHeight;
@@ -71,7 +71,7 @@ $mobileCellHeight: 48px;
     @extend cell;
     cursor: pointer;
 
-    $mediaIsMobile {
+    @media screen and (max-width: $mobileMaxWidth) {
       width: $mobileCellWidth;
       height: $mobileCellHeight;
       line-height: $mobileCellHeight;

@@ -12,13 +12,13 @@
     width: 100%;
     max-width: 1280px;
 
-    $mediaIsMobile {
+    @media screen and (max-width: $mobileMaxWidth) {
       padding: 15px 20px 11px;
     }
   }
 
   &__logo {
-    $mediaIsMobile {
+    @media screen and (max-width: $mobileMaxWidth) {
       height: 21px;
 
       &-image {
@@ -28,7 +28,7 @@
   }
 
   &__controls {
-    $mediaIsMobile {
+    @media screen and (max-width: $mobileMaxWidth) {
       display: none;
     }
   }

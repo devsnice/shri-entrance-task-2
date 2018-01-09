@@ -10,7 +10,7 @@
   width: 100%;
   text-align: left;
 
-  $mediaIsMobile {
+  @media screen and (max-width: $mobileMaxWidth) {
     height: 44px;
     line-height: 44px;
   }
@@ -18,7 +18,7 @@
   &__data {
     font-size: 13px;
 
-    $mediaIsMobile {
+    @media screen and (max-width: $mobileMaxWidth) {
       font-size: 15px;
     }
   }

@@ -19,7 +19,7 @@ button {
   font-family: $fontMedium;
   cursor: pointer;
 
-  $mediaIsMobile {
+  @media screen and (max-width: $mobileMaxWidth) {
     font-size: 15px;
   }
 
@@ -29,7 +29,7 @@ button {
       line-height: 36px;
       padding: 0 16px;
 
-      $mediaIsMobile {
+      @media screen and (max-width: $mobileMaxWidth) {
         height: 44px;
         line-height: 44px;
         padding: 0 24px;

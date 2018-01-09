@@ -6,7 +6,7 @@
   @util center-block;
   margin-bottom: 75px;
 
-  $mediaIsMobile {
+  @media screen and (max-width: $mobileMaxWidth) {
     width: 100%;
     padding: 24px 0;
   }
@@ -22,12 +22,12 @@
     }
 
     &__close {
-      $mediaIsMobile {
+      @media screen and (max-width: $mobileMaxWidth) {
         display: none;
       }
     }
 
-    $mediaIsMobile {
+    @media screen and (max-width: $mobileMaxWidth) {
       padding: 0 16px;
     }
   }
@@ -41,7 +41,7 @@
       width: 420px;
       margin-bottom: 24px;
 
-      $mediaIsMobile {
+      @media screen and (max-width: $mobileMaxWidth) {
         width: 100%;
         margin-bottom: 16px;
         padding-left: 16px;
@@ -51,19 +51,19 @@
       &_mobile {
         display: none;
 
-        $mediaIsMobile {
+        @media screen and (max-width: $mobileMaxWidth) {
           display: block;
         }
       }
 
       &_desktop {
-        $mediaIsMobile {
+        @media screen and (max-width: $mobileMaxWidth) {
           display: none;
         }
       }
 
       &_mobile_border {
-        $mediaIsMobile {
+        @media screen and (max-width: $mobileMaxWidth) {
           border-color: #e9ecef;
           border-style: solid;
           border-top-width: 0;
@@ -85,12 +85,12 @@
       display: flex;
       justify-content: space-between;
 
-      $mediaIsMobile {
+      @media screen and (max-width: $mobileMaxWidth) {
         display: block;
       }
     }
 
-    $mediaIsMobile {
+    @media screen and (max-width: $mobileMaxWidth) {
       flex-direction: column;
     }
   }
@@ -103,7 +103,7 @@
       flex-basis: 238px;
       margin-right: 16px;
 
-      $mediaIsMobile {
+      @media screen and (max-width: $mobileMaxWidth) {
         margin-right: 0;
       }
     }
@@ -111,7 +111,7 @@
     &_time {
       flex-basis: 72px;
 
-      $mediaIsMobile {
+      @media screen and (max-width: $mobileMaxWidth) {
         flex-basis: 0;
         flex-grow: 1;
         flex-shrink: 1;
@@ -122,7 +122,7 @@
       display: flex;
       align-items: flex-end;
 
-      $mediaIsMobile {
+      @media screen and (max-width: $mobileMaxWidth) {
         margin-top: 8px;
       }
     }
@@ -153,7 +153,7 @@
       display: flex;
       height: 100%;
 
-      $mediaIsMobile {
+      @media screen and (max-width: $mobileMaxWidth) {
         justify-content: flex-end;
         padding: 0 16px;
       }

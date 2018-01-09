@@ -14,7 +14,7 @@
     margin-right: 8px;
     margin-bottom: 8px;
 
-    $mediaIsMobile {
+    @media screen and (max-width: $mobileMaxWidth) {
       width: 100%;
       height: 32px;
     }
@@ -25,7 +25,7 @@
       width: 24px;
       border-radius: 100%;
 
-      $mediaIsMobile {
+      @media screen and (max-width: $mobileMaxWidth) {
         width: 32px;
         height: 32px;
       }
@@ -37,7 +37,7 @@
       padding: 0 36px 0 8px;
       line-height: 24px;
 
-      $mediaIsMobile {
+      @media screen and (max-width: $mobileMaxWidth) {
         font-size: 15px;
         line-height: 32px;
       }
@@ -50,7 +50,7 @@
       transform: translateY(-50%);
       cursor: pointer;
 
-      $mediaIsMobile {
+      @media screen and (max-width: $mobileMaxWidth) {
         right: 14px;
       }
     }

@@ -8,7 +8,7 @@
     &_mobile {
       display: none;
 
-      $mediaIsMobile {
+      @media screen and (max-width: $mobileMaxWidth) {
         display: block;
       }
     }
@@ -26,13 +26,13 @@
       width: 245px;
       padding: 0 24px 0 0;
 
-      $mediaIsMobile {
+      @media screen and (max-width: $mobileMaxWidth) {
         display: none;
       }
     }
 
     &__timeline {
-      $mediaIsMobile {
+      @media screen and (max-width: $mobileMaxWidth) {
         width: 1280px;
         height: 32px;
         border-top: 1px solid #e9ecef;
@@ -51,7 +51,7 @@
     overflow-y: visible;
     position: relative;
 
-    $mediaIsMobile {
+    @media screen and (max-width: $mobileMaxWidth) {
       height: calc(100% - 56px);
     }
   }
@@ -67,7 +67,7 @@
       left: 245px;
       top: 0;
 
-      $mediaIsMobile {
+      @media screen and (max-width: $mobileMaxWidth) {
         left: 145px;
       }
     }
@@ -92,7 +92,7 @@
         height: calc(100% + 12px);
         top: -12px;
 
-        $mediaIsMobile {
+        @media screen and (max-width: $mobileMaxWidth) {
           height: calc(100% + 6px);
           top: -6px;
         }
@@ -108,7 +108,7 @@
         letter-spacing: 0.4px;
         color: #252525;
 
-        $mediaIsMobile {
+        @media screen and (max-width: $mobileMaxWidth) {
           margin-bottom: 10px;
         }
 
@@ -122,7 +122,7 @@
           border-radius: 100px;
           margin-bottom: 0;
 
-          $mediaIsMobile {
+          @media screen and (max-width: $mobileMaxWidth) {
             margin-bottom: 0;
           }
         }
@@ -147,13 +147,13 @@
       background: #fff;
       height: 100%;
 
-      $mediaIsMobile {
+      @media screen and (max-width: $mobileMaxWidth) {
         display: none;
       }
     }
   }
 
-  $mediaIsMobile {
+  @media screen and (max-width: $mobileMaxWidth) {
     height: calc(100% - 48px);
   }
 }
