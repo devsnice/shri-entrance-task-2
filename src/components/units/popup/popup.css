@@ -42,6 +42,8 @@
   }
 
   &__content {
+    margin-top: 8px;
+
     &-text {
       margin-bottom: 8px;
       text-align: center;
