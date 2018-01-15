@@ -20,7 +20,7 @@ const flatten = require('gulp-flatten');
 const browserSync = require('browser-sync').create();
 
 const paths = {
-  public: './public',
+  public: './docs',
   views: './src/**/*.pug',
   pages: './src/pages/**/*.pug',
   styles: './src/**/*.css',
